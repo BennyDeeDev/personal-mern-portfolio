@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { body, validationResult } = require("express-validator");
+const { check, body, validationResult } = require("express-validator");
 
 /* {
   id: 1,
@@ -29,12 +29,20 @@ router.get("/", async (req, res) => {
 
 router.post(
 	"/",
-	[body("headline").notEmpty(), body("caption").notEmpty()],
+	[
+		check("headline")
+			.notEmpty()
+			.withMessage("headline is required")
+			.isString()
+			.withMessage("headline must be string"),
+		check("caption").isString()
+	],
 	async (req, res) => {
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
 			return res.status(400).json({ errors: errors.array() });
 		}
+
 		res.send(strengths);
 	}
 );
