@@ -36,21 +36,16 @@ router.post(
 		}
 
 		return req.body.strengths.forEach(async (s) => {
-			const existingStrengths = await Strength.find({ headline: s.headline });
-			if (existingStrengths.length === 0) {
-				const strength = new Strength({
-					headline: s.headline,
-					svgPath: s.svgPath || null,
-					caption: s.caption || null,
-				});
-				try {
-					await strength.save();
-					res.send(strength);
-				} catch (error) {
-					console.log(error);
-				}
-			} else {
-				return res.status(400).json("Duplicate Strength");
+			const strength = new Strength({
+				headline: s.headline,
+				svgPath: s.svgPath || null,
+				caption: s.caption || null,
+			});
+			try {
+				await strength.save();
+				res.send(strength);
+			} catch (error) {
+				console.log(error);
 			}
 		});
 	}
