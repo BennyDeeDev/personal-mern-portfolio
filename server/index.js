@@ -5,9 +5,9 @@ const app = express();
 const strengths = require("./routes/strengths");
 
 mongoose
-	.connect("mongodb://localhost/vidly")
+	.connect("mongodb://localhost/personal-mern-portfolio")
 	.then(() => console.log("Connected to MongoDB..."))
-	.catch(err => console.error("Could not connect to MongoDB..."));
+	.catch((err) => console.error("Could not connect to MongoDB..."));
 
 app.use(express.json());
 app.use("/api/strengths", strengths);
