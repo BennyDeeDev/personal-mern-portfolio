@@ -2,40 +2,44 @@ const express = require("express");
 const router = express.Router();
 const { check, body, validationResult, custom } = require("express-validator");
 
-const Skill = require("../models/skill");
+const Link = require("../models/link");
 
 router.get("/", async (req, res) => {
 	try {
-		const skills = await Skill.find();
-		res.send(skills);
+		const links = await Link.find();
+		res.send(links);
 	} catch (error) {
 		console.log(error);
 		return res.status(500).json("Server Error");
 	}
 });
 
-router.post("/", [check("skills").isArray()], async (req, res) => {
+router.post("/", [check("links").isArray()], async (req, res) => {
 	const errors = validationResult(req);
 	if (!errors.isEmpty()) {
 		return res.status(400).json({ errors: errors.array() });
 	}
 
 	try {
-		await Skill.deleteMany({});
+		await Link.deleteMany({});
 	} catch (error) {
 		res.status(500).json("Server Error");
 	}
 
-	return req.body.skills.forEach(async (s) => {
-		const skill = new Skill({
+	return req.body.links.forEach(async (s) => {
+		const link = new Link({
+			title: s.title,
+			link: s.link,
 			text: s.text,
-			progress: s.progress || null,
-			svgPath: s.svgPath || null,
-			tag: s.tag || null,
 		});
 		try {
-			await skill.save();
-			res.send(skill);
+			try {
+				await link.save();
+			} catch (error) {
+				res.status(500).json("Server Error");
+			}
+
+			res.send(link);
 		} catch (error) {
 			console.log(error);
 		}
