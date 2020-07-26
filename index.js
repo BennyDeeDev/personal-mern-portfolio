@@ -6,6 +6,9 @@ const strengths = require("./routes/strengths");
 const skills = require("./routes/skills");
 const cv = require("./routes/cv");
 const links = require("./routes/links");
+const user = require("./routes/user");
+
+const { port } = require("./config/config");
 
 mongoose
 	.connect("mongodb://localhost/personal-mern-portfolio", { useNewUrlParser: true, useUnifiedTopology: true })
@@ -17,6 +20,6 @@ app.use("/api/strengths", strengths);
 app.use("/api/skills", skills);
 app.use("/api/cv", cv);
 app.use("/api/links", links);
+app.use("/api/user", user);
 
-const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
