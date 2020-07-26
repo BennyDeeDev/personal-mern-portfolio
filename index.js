@@ -1,25 +1,14 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const app = express();
-
-const strengths = require("./routes/strengths");
-const skills = require("./routes/skills");
-const cv = require("./routes/cv");
-const links = require("./routes/links");
-const user = require("./routes/user");
-
+const logger = require("./startup/logger");
 const { port } = require("./config/config");
 
-mongoose
-	.connect("mongodb://localhost/personal-mern-portfolio", { useNewUrlParser: true, useUnifiedTopology: true })
-	.then(() => console.log("Connected to MongoDB..."))
-	.catch((err) => console.error("Could not connect to MongoDB..."));
+/* require("./startup/cors")(app); */
+require("./startup/routes")(app);
+require("./startup/db")();
+require("./startup/config")();
+/* require("./startup/validation")(); */
 
-app.use(express.json());
-app.use("/api/strengths", strengths);
-app.use("/api/skills", skills);
-app.use("/api/cv", cv);
-app.use("/api/links", links);
-app.use("/api/user", user);
+const server = app.listen(port, () => logger.info(`Listening on port ${port}...`));
 
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+module.exports = server;
