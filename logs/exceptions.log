@@ -1,0 +1,436 @@
+{
+  "error": {
+    "errno": -2,
+    "syscall": "open",
+    "code": "ENOENT",
+    "path": "./jwtRS256.key"
+  },
+  "level": "error",
+  "message": "uncaughtException: ENOENT: no such file or directory, open './jwtRS256.key'\nError: ENOENT: no such file or directory, open './jwtRS256.key'\n    at Object.openSync (fs.js:461:3)\n    at Object.readFileSync (fs.js:364:35)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/config/config.js:2:23)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:4:18)",
+  "stack": "Error: ENOENT: no such file or directory, open './jwtRS256.key'\n    at Object.openSync (fs.js:461:3)\n    at Object.readFileSync (fs.js:364:35)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/config/config.js:2:23)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:4:18)",
+  "exception": true,
+  "date": "Mon Jul 27 2020 10:38:54 GMT+0200 (Mitteleuropäische Sommerzeit)",
+  "process": {
+    "pid": 87799,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/benny/Repos/personal-mern-portfolio",
+    "execPath": "/usr/local/Cellar/node/14.1.0/bin/node",
+    "version": "v14.1.0",
+    "argv": ["/usr/local/Cellar/node/14.1.0/bin/node", "/Users/benny/Repos/personal-mern-portfolio/index.js"],
+    "memoryUsage": {
+      "rss": 33660928,
+      "heapTotal": 16003072,
+      "heapUsed": 8269664,
+      "external": 1332373,
+      "arrayBuffers": 34326
+    }
+  },
+  "os": {
+    "loadavg": [7.0546875, 7.71044921875, 5.63525390625],
+    "uptime": 335439
+  },
+  "trace": [{
+    "column": 3,
+    "file": "fs.js",
+    "function": "Object.openSync",
+    "line": 461,
+    "method": "openSync",
+    "native": false
+  }, {
+    "column": 35,
+    "file": "fs.js",
+    "function": "Object.readFileSync",
+    "line": 364,
+    "method": "readFileSync",
+    "native": false
+  }, {
+    "column": 23,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/config/config.js",
+    "function": null,
+    "line": 2,
+    "method": null,
+    "native": false
+  }, {
+    "column": 30,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._compile",
+    "line": 1176,
+    "method": "_compile",
+    "native": false
+  }, {
+    "column": 10,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._extensions..js",
+    "line": 1196,
+    "method": ".js",
+    "native": false
+  }, {
+    "column": 32,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module.load",
+    "line": 1040,
+    "method": "load",
+    "native": false
+  }, {
+    "column": 14,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._load",
+    "line": 929,
+    "method": "_load",
+    "native": false
+  }, {
+    "column": 19,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module.require",
+    "line": 1080,
+    "method": "require",
+    "native": false
+  }, {
+    "column": 18,
+    "file": "internal/modules/cjs/helpers.js",
+    "function": "require",
+    "line": 72,
+    "method": null,
+    "native": false
+  }, {
+    "column": 18,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/index.js",
+    "function": null,
+    "line": 4,
+    "method": null,
+    "native": false
+  }]
+} {
+  "error": {},
+  "level": "error",
+  "message": "uncaughtException: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\nMongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.Connection.openUri (/Users/benny/Repos/personal-mern-portfolio/node_modules/mongoose/lib/connection.js:582:11)\n    at Mongoose.connect (/Users/benny/Repos/personal-mern-portfolio/node_modules/mongoose/lib/index.js:335:15)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/db.js:7:4)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:24)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47",
+  "stack": "MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.Connection.openUri (/Users/benny/Repos/personal-mern-portfolio/node_modules/mongoose/lib/connection.js:582:11)\n    at Mongoose.connect (/Users/benny/Repos/personal-mern-portfolio/node_modules/mongoose/lib/index.js:335:15)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/db.js:7:4)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:24)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47",
+  "exception": true,
+  "date": "Mon Jul 27 2020 10:43:42 GMT+0200 (Mitteleuropäische Sommerzeit)",
+  "process": {
+    "pid": 88020,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/benny/Repos/personal-mern-portfolio",
+    "execPath": "/usr/local/Cellar/node/14.1.0/bin/node",
+    "version": "v14.1.0",
+    "argv": ["/usr/local/Cellar/node/14.1.0/bin/node", "/Users/benny/Repos/personal-mern-portfolio/index.js"],
+    "memoryUsage": {
+      "rss": 60964864,
+      "heapTotal": 35254272,
+      "heapUsed": 24712368,
+      "external": 20535902,
+      "arrayBuffers": 19092329
+    }
+  },
+  "os": {
+    "loadavg": [3.88916015625, 5.54150390625, 5.21630859375],
+    "uptime": 335727
+  },
+  "trace": [{
+    "column": 11,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/mongoose/lib/connection.js",
+    "function": "NativeConnection.Connection.openUri",
+    "line": 582,
+    "method": "openUri",
+    "native": false
+  }, {
+    "column": 15,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/mongoose/lib/index.js",
+    "function": "Mongoose.connect",
+    "line": 335,
+    "method": "connect",
+    "native": false
+  }, {
+    "column": 4,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/startup/db.js",
+    "function": "module.exports",
+    "line": 7,
+    "method": "exports",
+    "native": false
+  }, {
+    "column": 24,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/index.js",
+    "function": null,
+    "line": 8,
+    "method": null,
+    "native": false
+  }, {
+    "column": 30,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._compile",
+    "line": 1176,
+    "method": "_compile",
+    "native": false
+  }, {
+    "column": 10,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._extensions..js",
+    "line": 1196,
+    "method": ".js",
+    "native": false
+  }, {
+    "column": 32,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module.load",
+    "line": 1040,
+    "method": "load",
+    "native": false
+  }, {
+    "column": 14,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._load",
+    "line": 929,
+    "method": "_load",
+    "native": false
+  }, {
+    "column": 12,
+    "file": "internal/modules/run_main.js",
+    "function": "Function.executeUserEntryPoint [as runMain]",
+    "line": 71,
+    "method": "executeUserEntryPoint [as runMain]",
+    "native": false
+  }, {
+    "column": 47,
+    "file": "internal/main/run_main_module.js",
+    "function": null,
+    "line": 17,
+    "method": null,
+    "native": false
+  }]
+} {
+  "error": {},
+  "level": "error",
+  "message": "uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47",
+  "stack": "TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47",
+  "exception": true,
+  "date": "Mon Jul 27 2020 11:53:45 GMT+0200 (Mitteleuropäische Sommerzeit)",
+  "process": {
+    "pid": 89905,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/benny/Repos/personal-mern-portfolio",
+    "execPath": "/usr/local/Cellar/node/14.1.0/bin/node",
+    "version": "v14.1.0",
+    "argv": ["/usr/local/Cellar/node/14.1.0/bin/node", "/Users/benny/Repos/personal-mern-portfolio/index.js"],
+    "memoryUsage": {
+      "rss": 60268544,
+      "heapTotal": 52031488,
+      "heapUsed": 23784240,
+      "external": 20090197,
+      "arrayBuffers": 18646624
+    }
+  },
+  "os": {
+    "loadavg": [2.87451171875, 2.78369140625, 2.88232421875],
+    "uptime": 339928
+  },
+  "trace": [{
+    "column": 13,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js",
+    "function": "Function.use",
+    "line": 458,
+    "method": "use",
+    "native": false
+  }, {
+    "column": 21,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js",
+    "function": null,
+    "line": 220,
+    "method": null,
+    "native": false
+  }, {
+    "column": null,
+    "file": null,
+    "function": "Array.forEach",
+    "line": null,
+    "method": "forEach",
+    "native": false
+  }, {
+    "column": 7,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js",
+    "function": "Function.use",
+    "line": 217,
+    "method": "use",
+    "native": false
+  }, {
+    "column": 6,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/startup/routes.js",
+    "function": "module.exports",
+    "line": 17,
+    "method": "exports",
+    "native": false
+  }, {
+    "column": 28,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/index.js",
+    "function": null,
+    "line": 7,
+    "method": null,
+    "native": false
+  }, {
+    "column": 30,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._compile",
+    "line": 1176,
+    "method": "_compile",
+    "native": false
+  }, {
+    "column": 10,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._extensions..js",
+    "line": 1196,
+    "method": ".js",
+    "native": false
+  }, {
+    "column": 32,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module.load",
+    "line": 1040,
+    "method": "load",
+    "native": false
+  }, {
+    "column": 14,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._load",
+    "line": 929,
+    "method": "_load",
+    "native": false
+  }, {
+    "column": 12,
+    "file": "internal/modules/run_main.js",
+    "function": "Function.executeUserEntryPoint [as runMain]",
+    "line": 71,
+    "method": "executeUserEntryPoint [as runMain]",
+    "native": false
+  }, {
+    "column": 47,
+    "file": "internal/main/run_main_module.js",
+    "function": null,
+    "line": 17,
+    "method": null,
+    "native": false
+  }]
+} {
+  "error": {},
+  "level": "error",
+  "message": "uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47",
+  "stack": "TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47",
+  "exception": true,
+  "date": "Mon Jul 27 2020 11:53:58 GMT+0200 (Mitteleuropäische Sommerzeit)",
+  "process": {
+    "pid": 89927,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/benny/Repos/personal-mern-portfolio",
+    "execPath": "/usr/local/Cellar/node/14.1.0/bin/node",
+    "version": "v14.1.0",
+    "argv": ["/usr/local/Cellar/node/14.1.0/bin/node", "/Users/benny/Repos/personal-mern-portfolio/index.js"],
+    "memoryUsage": {
+      "rss": 61546496,
+      "heapTotal": 52031488,
+      "heapUsed": 23637392,
+      "external": 20082005,
+      "arrayBuffers": 18638432
+    }
+  },
+  "os": {
+    "loadavg": [2.30517578125, 2.66259765625, 2.8369140625],
+    "uptime": 339941
+  },
+  "trace": [{
+    "column": 13,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js",
+    "function": "Function.use",
+    "line": 458,
+    "method": "use",
+    "native": false
+  }, {
+    "column": 21,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js",
+    "function": null,
+    "line": 220,
+    "method": null,
+    "native": false
+  }, {
+    "column": null,
+    "file": null,
+    "function": "Array.forEach",
+    "line": null,
+    "method": "forEach",
+    "native": false
+  }, {
+    "column": 7,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js",
+    "function": "Function.use",
+    "line": 217,
+    "method": "use",
+    "native": false
+  }, {
+    "column": 6,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/startup/routes.js",
+    "function": "module.exports",
+    "line": 17,
+    "method": "exports",
+    "native": false
+  }, {
+    "column": 28,
+    "file": "/Users/benny/Repos/personal-mern-portfolio/index.js",
+    "function": null,
+    "line": 7,
+    "method": null,
+    "native": false
+  }, {
+    "column": 30,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._compile",
+    "line": 1176,
+    "method": "_compile",
+    "native": false
+  }, {
+    "column": 10,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._extensions..js",
+    "line": 1196,
+    "method": ".js",
+    "native": false
+  }, {
+    "column": 32,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module.load",
+    "line": 1040,
+    "method": "load",
+    "native": false
+  }, {
+    "column": 14,
+    "file": "internal/modules/cjs/loader.js",
+    "function": "Module._load",
+    "line": 929,
+    "method": "_load",
+    "native": false
+  }, {
+    "column": 12,
+    "file": "internal/modules/run_main.js",
+    "function": "Function.executeUserEntryPoint [as runMain]",
+    "line": 71,
+    "method": "executeUserEntryPoint [as runMain]",
+    "native": false
+  }, {
+    "column": 47,
+    "file": "internal/main/run_main_module.js",
+    "function": null,
+    "line": 17,
+    "method": null,
+    "native": false
+  }]
+}{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","exception":true,"date":"Mon Jul 27 2020 11:55:30 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90002,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":60493824,"heapTotal":35254272,"heapUsed":24510688,"external":20528802,"arrayBuffers":19085229}},"os":{"loadavg":[2.1767578125,2.45947265625,2.73486328125],"uptime":340033},"trace":[{"column":13,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":21,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":null,"line":220,"method":null,"native":false},{"column":null,"file":null,"function":"Array.forEach","line":null,"method":"forEach","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":"Function.use","line":217,"method":"use","native":false},{"column":6,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":"module.exports","line":17,"method":"exports","native":false},{"column":28,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":7,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":71,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","exception":true,"date":"Mon Jul 27 2020 11:55:41 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90013,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":60997632,"heapTotal":52031488,"heapUsed":23510216,"external":20082005,"arrayBuffers":18638432}},"os":{"loadavg":[2.54345703125,2.52685546875,2.75537109375],"uptime":340044},"trace":[{"column":13,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":21,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":null,"line":220,"method":null,"native":false},{"column":null,"file":null,"function":"Array.forEach","line":null,"method":"forEach","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":"Function.use","line":217,"method":"use","native":false},{"column":6,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":"module.exports","line":17,"method":"exports","native":false},{"column":28,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":7,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":71,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:7:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","exception":true,"date":"Mon Jul 27 2020 11:55:53 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90031,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":60141568,"heapTotal":34992128,"heapUsed":24259632,"external":20340980,"arrayBuffers":18897407}},"os":{"loadavg":[3.94384765625,2.81591796875,2.8525390625],"uptime":340056},"trace":[{"column":13,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":21,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":null,"line":220,"method":null,"native":false},{"column":null,"file":null,"function":"Array.forEach","line":null,"method":"forEach","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":"Function.use","line":217,"method":"use","native":false},{"column":6,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":"module.exports","line":17,"method":"exports","native":false},{"column":28,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":7,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":71,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","exception":true,"date":"Mon Jul 27 2020 11:57:56 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90101,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":63164416,"heapTotal":53608448,"heapUsed":25533504,"external":20310414,"arrayBuffers":18866841}},"os":{"loadavg":[2.318359375,2.533203125,2.72998046875],"uptime":340179},"trace":[{"column":13,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":21,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":null,"line":220,"method":null,"native":false},{"column":null,"file":null,"function":"Array.forEach","line":null,"method":"forEach","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":"Function.use","line":217,"method":"use","native":false},{"column":6,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":"module.exports","line":17,"method":"exports","native":false},{"column":28,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":8,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":71,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js:458:13)\n    at Function.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:220:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js:217:7)\n    at module.exports (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:17:6)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:28)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47","exception":true,"date":"Mon Jul 27 2020 11:58:05 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90114,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":62418944,"heapTotal":53870592,"heapUsed":25397088,"external":20102779,"arrayBuffers":18654816}},"os":{"loadavg":[2.58251953125,2.5810546875,2.74462890625],"uptime":340188},"trace":[{"column":13,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/router/index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":21,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":null,"line":220,"method":null,"native":false},{"column":null,"file":null,"function":"Array.forEach","line":null,"method":"forEach","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/application.js","function":"Function.use","line":217,"method":"use","native":false},{"column":6,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":"module.exports","line":17,"method":"exports","native":false},{"column":28,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":8,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":71,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Unexpected end of input\n/Users/benny/Repos/personal-mern-portfolio/routes/upload.js:22\n\n\n\nSyntaxError: Unexpected end of input\n    at Object.compileFunction (vm.js:344:18)\n    at wrapSafe (internal/modules/cjs/loader.js:1106:15)\n    at Module._compile (internal/modules/cjs/loader.js:1140:27)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:8:16)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:1)","stack":"/Users/benny/Repos/personal-mern-portfolio/routes/upload.js:22\n\n\n\nSyntaxError: Unexpected end of input\n    at Object.compileFunction (vm.js:344:18)\n    at wrapSafe (internal/modules/cjs/loader.js:1106:15)\n    at Module._compile (internal/modules/cjs/loader.js:1140:27)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:8:16)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:1)","exception":true,"date":"Mon Jul 27 2020 12:18:44 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90558,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":62836736,"heapTotal":53608448,"heapUsed":25402048,"external":20143502,"arrayBuffers":18695539}},"os":{"loadavg":[2.78759765625,2.126953125,2.22802734375],"uptime":341427},"trace":[{"column":18,"file":"vm.js","function":"Object.compileFunction","line":344,"method":"compileFunction","native":false},{"column":15,"file":"internal/modules/cjs/loader.js","function":"wrapSafe","line":1106,"method":null,"native":false},{"column":27,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1140,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":19,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":1080,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":72,"method":null,"native":false},{"column":16,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":null,"line":8,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":19,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":1080,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":72,"method":null,"native":false},{"column":1,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":8,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Unexpected end of input\n/Users/benny/Repos/personal-mern-portfolio/routes/upload.js:22\n\n\n\nSyntaxError: Unexpected end of input\n    at Object.compileFunction (vm.js:344:18)\n    at wrapSafe (internal/modules/cjs/loader.js:1106:15)\n    at Module._compile (internal/modules/cjs/loader.js:1140:27)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:8:16)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:1)","stack":"/Users/benny/Repos/personal-mern-portfolio/routes/upload.js:22\n\n\n\nSyntaxError: Unexpected end of input\n    at Object.compileFunction (vm.js:344:18)\n    at wrapSafe (internal/modules/cjs/loader.js:1106:15)\n    at Module._compile (internal/modules/cjs/loader.js:1140:27)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:8:16)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:8:1)","exception":true,"date":"Mon Jul 27 2020 12:20:13 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":90611,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":62685184,"heapTotal":53608448,"heapUsed":25870472,"external":20349172,"arrayBuffers":18905599}},"os":{"loadavg":[1.76220703125,1.9716796875,2.1572265625],"uptime":341516},"trace":[{"column":18,"file":"vm.js","function":"Object.compileFunction","line":344,"method":"compileFunction","native":false},{"column":15,"file":"internal/modules/cjs/loader.js","function":"wrapSafe","line":1106,"method":null,"native":false},{"column":27,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1140,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":19,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":1080,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":72,"method":null,"native":false},{"column":16,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":null,"line":8,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":19,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":1080,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":72,"method":null,"native":false},{"column":1,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":8,"method":null,"native":false}]}
+{"error":{"code":"ERR_HTTP_HEADERS_SENT"},"level":"error","message":"uncaughtException: Cannot set headers after they are sent to the client\nError [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:541:11)\n    at ServerResponse.header (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:771:10)\n    at ServerResponse.send (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:170:12)\n    at /Users/benny/Repos/personal-mern-portfolio/middleware/upload.js:14:7\n    at /Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:56:57\n    at WriteStream.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:181:29)\n    at WriteStream.emit (events.js:315:20)\n    at emitCloseNT (internal/streams/destroy.js:81:10)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:541:11)\n    at ServerResponse.header (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:771:10)\n    at ServerResponse.send (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:170:12)\n    at /Users/benny/Repos/personal-mern-portfolio/middleware/upload.js:14:7\n    at /Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:56:57\n    at WriteStream.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:181:29)\n    at WriteStream.emit (events.js:315:20)\n    at emitCloseNT (internal/streams/destroy.js:81:10)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","exception":true,"date":"Mon Jul 27 2020 12:50:26 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":91185,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":67051520,"heapTotal":55967744,"heapUsed":24018592,"external":20628164,"arrayBuffers":19166568}},"os":{"loadavg":[3.15283203125,2.52392578125,2.3447265625],"uptime":343329},"trace":[{"column":11,"file":"_http_outgoing.js","function":"ServerResponse.setHeader","line":541,"method":"setHeader","native":false},{"column":10,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js","function":"ServerResponse.header","line":771,"method":"header","native":false},{"column":12,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js","function":"ServerResponse.send","line":170,"method":"send","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/middleware/upload.js","function":null,"line":14,"method":null,"native":false},{"column":57,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js","function":null,"line":56,"method":null,"native":false},{"column":29,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js","function":null,"line":181,"method":null,"native":false},{"column":20,"file":"events.js","function":"WriteStream.emit","line":315,"method":"emit","native":false},{"column":10,"file":"internal/streams/destroy.js","function":"emitCloseNT","line":81,"method":null,"native":false},{"column":21,"file":"internal/process/task_queues.js","function":"processTicksAndRejections","line":83,"method":null,"native":false}]}
+{"error":{"code":"ERR_HTTP_HEADERS_SENT"},"level":"error","message":"uncaughtException: Cannot set headers after they are sent to the client\nError [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:541:11)\n    at ServerResponse.header (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:771:10)\n    at ServerResponse.send (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:170:12)\n    at /Users/benny/Repos/personal-mern-portfolio/middleware/upload.js:14:7\n    at /Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:56:57\n    at WriteStream.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:181:29)\n    at WriteStream.emit (events.js:315:20)\n    at emitCloseNT (internal/streams/destroy.js:81:10)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:541:11)\n    at ServerResponse.header (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:771:10)\n    at ServerResponse.send (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:170:12)\n    at /Users/benny/Repos/personal-mern-portfolio/middleware/upload.js:14:7\n    at /Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:56:57\n    at WriteStream.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:181:29)\n    at WriteStream.emit (events.js:315:20)\n    at emitCloseNT (internal/streams/destroy.js:81:10)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","exception":true,"date":"Mon Jul 27 2020 13:04:21 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":91467,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":50524160,"heapTotal":23982080,"heapUsed":21755440,"external":20627717,"arrayBuffers":19167409}},"os":{"loadavg":[1.54541015625,2.087890625,2.1650390625],"uptime":344164},"trace":[{"column":11,"file":"_http_outgoing.js","function":"ServerResponse.setHeader","line":541,"method":"setHeader","native":false},{"column":10,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js","function":"ServerResponse.header","line":771,"method":"header","native":false},{"column":12,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js","function":"ServerResponse.send","line":170,"method":"send","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/middleware/upload.js","function":null,"line":14,"method":null,"native":false},{"column":57,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js","function":null,"line":56,"method":null,"native":false},{"column":29,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js","function":null,"line":181,"method":null,"native":false},{"column":20,"file":"events.js","function":"WriteStream.emit","line":315,"method":"emit","native":false},{"column":10,"file":"internal/streams/destroy.js","function":"emitCloseNT","line":81,"method":null,"native":false},{"column":21,"file":"internal/process/task_queues.js","function":"processTicksAndRejections","line":83,"method":null,"native":false}]}
+{"error":{"code":"ERR_HTTP_HEADERS_SENT"},"level":"error","message":"uncaughtException: Cannot set headers after they are sent to the client\nError [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:541:11)\n    at ServerResponse.header (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:771:10)\n    at ServerResponse.send (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:170:12)\n    at /Users/benny/Repos/personal-mern-portfolio/middleware/upload.js:14:7\n    at /Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:56:57\n    at WriteStream.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:181:29)\n    at WriteStream.emit (events.js:315:20)\n    at emitCloseNT (internal/streams/destroy.js:81:10)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:541:11)\n    at ServerResponse.header (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:771:10)\n    at ServerResponse.send (/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js:170:12)\n    at /Users/benny/Repos/personal-mern-portfolio/middleware/upload.js:14:7\n    at /Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:56:57\n    at WriteStream.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js:181:29)\n    at WriteStream.emit (events.js:315:20)\n    at emitCloseNT (internal/streams/destroy.js:81:10)\n    at processTicksAndRejections (internal/process/task_queues.js:83:21)","exception":true,"date":"Mon Jul 27 2020 13:06:09 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":91587,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":66998272,"heapTotal":56229888,"heapUsed":24205568,"external":20629005,"arrayBuffers":19167409}},"os":{"loadavg":[2.0947265625,2.17431640625,2.19091796875],"uptime":344272},"trace":[{"column":11,"file":"_http_outgoing.js","function":"ServerResponse.setHeader","line":541,"method":"setHeader","native":false},{"column":10,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js","function":"ServerResponse.header","line":771,"method":"header","native":false},{"column":12,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express/lib/response.js","function":"ServerResponse.send","line":170,"method":"send","native":false},{"column":7,"file":"/Users/benny/Repos/personal-mern-portfolio/middleware/upload.js","function":null,"line":14,"method":null,"native":false},{"column":57,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js","function":null,"line":56,"method":null,"native":false},{"column":29,"file":"/Users/benny/Repos/personal-mern-portfolio/node_modules/express-fileupload/lib/utilities.js","function":null,"line":181,"method":null,"native":false},{"column":20,"file":"events.js","function":"WriteStream.emit","line":315,"method":"emit","native":false},{"column":10,"file":"internal/streams/destroy.js","function":"emitCloseNT","line":81,"method":null,"native":false},{"column":21,"file":"internal/process/task_queues.js","function":"processTicksAndRejections","line":83,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: missing ) after argument list\n/Users/benny/Repos/personal-mern-portfolio/routes/skills.js:18\nrouter.post(\"/\", [upload]module, async (req, res) => {\n                        ^\n\nSyntaxError: missing ) after argument list\n    at Object.compileFunction (vm.js:344:18)\n    at wrapSafe (internal/modules/cjs/loader.js:1106:15)\n    at Module._compile (internal/modules/cjs/loader.js:1140:27)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:4:16)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:9:1)","stack":"/Users/benny/Repos/personal-mern-portfolio/routes/skills.js:18\nrouter.post(\"/\", [upload]module, async (req, res) => {\n                        ^\n\nSyntaxError: missing ) after argument list\n    at Object.compileFunction (vm.js:344:18)\n    at wrapSafe (internal/modules/cjs/loader.js:1106:15)\n    at Module._compile (internal/modules/cjs/loader.js:1140:27)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/startup/routes.js:4:16)\n    at Module._compile (internal/modules/cjs/loader.js:1176:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1196:10)\n    at Module.load (internal/modules/cjs/loader.js:1040:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:929:14)\n    at Module.require (internal/modules/cjs/loader.js:1080:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (/Users/benny/Repos/personal-mern-portfolio/index.js:9:1)","exception":true,"date":"Mon Jul 27 2020 13:38:15 GMT+0200 (Mitteleuropäische Sommerzeit)","process":{"pid":92145,"uid":501,"gid":20,"cwd":"/Users/benny/Repos/personal-mern-portfolio","execPath":"/usr/local/Cellar/node/14.1.0/bin/node","version":"v14.1.0","argv":["/usr/local/Cellar/node/14.1.0/bin/node","/Users/benny/Repos/personal-mern-portfolio/index.js"],"memoryUsage":{"rss":61673472,"heapTotal":52822016,"heapUsed":21983992,"external":20068517,"arrayBuffers":18620554}},"os":{"loadavg":[6.85400390625,3.2021484375,2.30712890625],"uptime":346198},"trace":[{"column":18,"file":"vm.js","function":"Object.compileFunction","line":344,"method":"compileFunction","native":false},{"column":15,"file":"internal/modules/cjs/loader.js","function":"wrapSafe","line":1106,"method":null,"native":false},{"column":27,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1140,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":19,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":1080,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":72,"method":null,"native":false},{"column":16,"file":"/Users/benny/Repos/personal-mern-portfolio/startup/routes.js","function":null,"line":4,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1176,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1196,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":1040,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":929,"method":"_load","native":false},{"column":19,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":1080,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":72,"method":null,"native":false},{"column":1,"file":"/Users/benny/Repos/personal-mern-portfolio/index.js","function":null,"line":9,"method":null,"native":false}]}

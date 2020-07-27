@@ -2,9 +2,15 @@ const mongoose = require("mongoose");
 
 const CvSchema = new mongoose.Schema({
 	title: String,
-	timespan: String,
-	location: String,
-	text: String,
+	timespan: {
+		type: String,
+		required: true
+	},
+	location: {
+		type: String,
+		required: true
+	},
+	text: String
 });
 
 module.exports = mongoose.model("Cv", CvSchema);

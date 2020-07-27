@@ -22,11 +22,16 @@ const { combine, timestamp, prettyPrint, colorize, json, simple } = format;
 
 const logger = createLogger({
 	transports: [
-		new transports.Console({ format: combine(colorize(), simple(), timestamp(), prettyPrint(), json()) }),
-		new transports.File({ filename: "./logs/error.log", level: "error" }),
-	],
+		new transports.Console({
+			format: combine(colorize(), simple(), prettyPrint())
+		}),
+		new transports.File({ filename: "./logs/error.log", level: "error" })
+	]
 });
 
-logger.exceptions.handle(new transports.File({ filename: "exceptions.log" }));
+logger.exceptions.handle(
+	new transports.Console(simple()),
+	new transports.File({ filename: "./logs/exceptions.log" })
+);
 
 module.exports = logger;
