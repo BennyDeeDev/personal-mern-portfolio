@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 
 const StrengthSchema = new mongoose.Schema({
-	headline: {
+	title: {
 		type: String,
-		required: true,
+		required: true
 	},
-	svgPath: {
-		type: String,
+	image: {
+		type: String
 	},
-	caption: {
-		type: String,
-	},
+	text: {
+		type: String
+	}
 });
 
 module.exports = mongoose.model("Strength", StrengthSchema);

@@ -9,10 +9,10 @@ const upload = require("../routes/upload");
 
 module.exports = function (app) {
 	app.use(express.json());
-	app.use("/api/strengths", strengths);
-	app.use("/api/skills", skills);
-	app.use("/api/cv", cv);
-	app.use("/api/links", links);
+	app.use("/api/user/strengths", strengths);
+	app.use("/api/user/skills", skills);
+	app.use("/api/user/cv", cv);
+	app.use("/api/user/links", links);
 	app.use("/api/user", user);
 	app.use("/api/upload", upload);
 };

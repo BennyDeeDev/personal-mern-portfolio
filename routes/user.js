@@ -4,7 +4,7 @@ const User = require("../models/user.model");
 const express = require("express");
 const router = express.Router();
 
-router.get("/me", auth, async (req, res) => {
+router.get("/", auth, async (req, res) => {
 	const user = await User.findById(req.user._id).select("-password");
 	res.send(user);
 });
@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
 	user = new User({
 		email: req.body.email,
-		password: req.body.password,
+		password: req.body.password
 	});
 
 	const salt = await bcrypt.genSalt(10);

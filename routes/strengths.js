@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { check, body, validationResult, custom } = require("express-validator");
+const { check, validationResult } = require("express-validator");
 
 const Strength = require("../models/strength");
 
@@ -16,12 +16,9 @@ router.get("/", async (req, res) => {
 router.post(
 	"/",
 	[
-		check("strengths").isArray(),
-		/* 			.custom((array) => {
-				array.map((strength, index) => {
-					return check(strength.headline).isString;
-				});
-			}), */
+		check("title").isString().withMessage("title must be string"),
+		check("image").optional(),
+		check("text").isString().withMessage("text must be string")
 	],
 	async (req, res) => {
 		const errors = validationResult(req);
@@ -29,25 +26,19 @@ router.post(
 			return res.status(400).json({ errors: errors.array() });
 		}
 
-		try {
-			await Strength.deleteMany({});
-		} catch (error) {
-			res.status(500).json("Server Error");
-		}
+		const { title, image, text } = req.body;
 
-		return req.body.strengths.forEach(async (s) => {
-			const strength = new Strength({
-				headline: s.headline,
-				svgPath: s.svgPath || null,
-				caption: s.caption || null,
-			});
-			try {
-				await strength.save();
-				res.send(strength);
-			} catch (error) {
-				console.log(error);
-			}
+		const strength = new Strength({
+			title,
+			image,
+			text
 		});
+		try {
+			await strength.save();
+			res.send(strength);
+		} catch (error) {
+			console.error(error);
+		}
 	}
 );
 
