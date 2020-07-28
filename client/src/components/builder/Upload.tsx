@@ -1,9 +1,10 @@
 import React from "react";
+import Save from "./Save";
 
 export default function Upload() {
 	return (
 		<div className="py-2">
-			<button className="w-full bg-minimalist-lime hover:bg-minimalist-lime text-white font-bold p-2 inline-flex items-center rounded-lg">
+			<button className="w-full bg-minimalist-yellow opacity-75 text-black font-bold p-2 inline-flex items-center rounded-lg">
 				<svg
 					fill="#FFF"
 					height="18"

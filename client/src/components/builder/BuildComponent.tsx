@@ -1,5 +1,6 @@
 import React from "react";
 import close from "../../images/close.svg";
+import Save from "./Save";
 
 export default function BuildComponent({ children, index, onDelete }) {
 	return (
@@ -13,6 +14,7 @@ export default function BuildComponent({ children, index, onDelete }) {
 				/>
 			</div>
 			{children}
+			{/* 	<Save padding="p-2" /> */}
 		</div>
 	);
 }
