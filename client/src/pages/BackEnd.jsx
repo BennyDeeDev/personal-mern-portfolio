@@ -9,39 +9,60 @@ import Upload from "../components/builder/Upload";
 
 //TODO: Datepicker anstatt Time Span Input; floating label
 export default function BackEnd() {
-	let initialStrengths = [
-		{
-			id: uuidv4(),
-			strength: "minimalistisch",
-			text: "kein clutter"
-		}
-	];
-
-	const [strengths, setStrengths] = useState([]);
-
-	useEffect(() => {
-		setStrengths(initialStrengths);
-	}, []);
-
-	let cv = [
-		{
-			id: uuidv4(),
-			title: "Praktikum in der Frontend Entwicklung",
-			timespan: "2020 Mai - 2020 August",
-			location: "WebSix GmbH in Backnang",
-			text:
-				"Pflegen von Landing Pages mit HTML, Stylen von Landing Pages mit Tailwind CSS und/oder Sass, Programmierung eines Beleg-Prüfers in Vue.js"
-		}
-	];
-
-	const handleAdd = () => {
-		setStrengths([...strengths, { id: uuidv4() }]);
-		console.log(strengths);
+	const initData = {
+		strengths: [
+			{
+				id: uuidv4(),
+				svg: null,
+				title: "minimalistisch",
+				text: "kein clutter"
+			}
+		],
+		skills: [
+			{
+				id: uuidv4(),
+				svg: null,
+				text: "React",
+				progress: "80%"
+			}
+		],
+		cv: [
+			{
+				id: uuidv4(),
+				title: "Praktikum in der Frontend Entwicklung",
+				timespan: "2020 Mai - 2020 August",
+				location: "WebSix GmbH in Backnang",
+				text:
+					"Pflegen von Landing Pages mit HTML, Stylen von Landing Pages mit Tailwind CSS und/oder Sass, Programmierung eines Beleg-Prüfers in Vue.js",
+				tags: ["Frontend"]
+			}
+		]
 	};
 
-	const handleDelete = id => {
-		if (strengths.length > 0)
-			setStrengths(strengths.filter(item => item.id !== id));
+	const [data, setData] = useState(initData);
+
+	/* useEffect(() => {
+		setData(initData);
+	}, [data]); */
+
+	const handleAdd = section => {
+		/* console.log(
+			{...data, ...data[section], { id: uuidv4() }},
+			"add data section"
+		); */
+		/* console.log(data, "pure data add");
+		if (!section || !data) return;
+		setData({ ...data }, [...data[section], { id: uuidv4() }]);
+ */
+		setData({ ...data, [section]: [...data[section], { id: uuidv4() }] });
+
+		/* setData(data[section].push({ id: uuidv4() })); */
+	};
+
+	const handleDelete = (id, section) => {
+		console.log(section, data[section]);
+		if (!section || !data) return;
+		setData(data[section].filter(item => item.id !== id));
 	};
 
 	return (
@@ -57,16 +78,17 @@ export default function BackEnd() {
 					title="Add a strength here (3 max):"
 					max={3}
 					onAdd={handleAdd}
+					section={"strengths"}
 				>
-					{strengths.map((d, index) => (
+					{data.strengths.map((s, index) => (
 						<BuildComponent
 							key={index}
-							onDelete={handleDelete}
-							id={d.id}
+							onDelete={id => handleDelete(id, "strengths")}
+							id={s.id}
 						>
-							<Input value={d.strength} placeholder="Title" />
+							<Input value={s.title} placeholder="Title" />
 							<Upload />
-							<Input value={d.text} placeholder="Text" />
+							<Input value={s.text} placeholder="Text" />
 						</BuildComponent>
 					))}
 				</BuilderSection>

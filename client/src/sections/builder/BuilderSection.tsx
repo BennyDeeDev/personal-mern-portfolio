@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import add from "../../images/add.svg";
 import Save from "../../components/builder/Save";
 import next from "../../images/next.svg";
+import BuildComponent from "../../components/builder/BuildComponent";
+import Input from "../../components/builder/Input";
+import Upload from "../../components/builder/Upload";
 
 //TODO: collapse wenn nichts drinne ist aber hinzugefügt wird
 export default function BuilderSection({
@@ -9,7 +12,8 @@ export default function BuilderSection({
 	max,
 	children,
 	onAdd,
-	onDelete
+	onDelete,
+	section
 }) {
 	/* 	const [items, setItem] = useState([]); */
 	const [collapse, setCollapse] = useState(false);
@@ -44,7 +48,6 @@ export default function BuilderSection({
 	/* 		const handleAdd = () => {
 		setItem([{ id: uuidv4() }, ...items]);
 	}; */
-
 	return (
 		<div className="mt-4">
 			<div className="bg-gray-500 rounded-lg p-4">
@@ -77,7 +80,7 @@ export default function BuilderSection({
 				</div>
 				{
 					<button
-						onClick={() => onAdd()}
+						onClick={() => onAdd(section)}
 						className="w-full p-2 bg-minimalist-teal bg-opacity-75 rounded-lg text-white flex items-center justify-center hover:bg-opacity-100 transition duration-150 ease-in-out"
 					>
 						<img className="w-6" src={add} alt="" />
