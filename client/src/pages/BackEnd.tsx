@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Save from "../components/builder/Save";
-import BuilderSection from "../sections/builder/BuilderSection";
 import { v4 as uuidv4 } from "uuid";
-
-import BuildComponent from "../components/builder/BuildComponent";
-import Input from "../components/builder/Input";
-import Upload from "../components/builder/Upload";
 import StrengthBuilder from "../sections/builder/StrengthBuilder";
 
 //TODO: Datepicker anstatt Time Span Input; floating label
@@ -52,15 +47,12 @@ export default function BackEnd() {
 	};
 
 	const handleDelete = (id, section) => {
-		console.log(section, data[section]);
 		if (!section || !data) return;
 		setData({
 			...data,
 			[section]: data[section].filter(item => item.id !== id)
 		});
 	};
-
-	console.log(data);
 
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
@@ -75,12 +67,7 @@ export default function BackEnd() {
 					onDelete={id => handleDelete(id, "strengths")}
 					onAdd={handleAdd}
 					strengths={data.strengths}
-				></StrengthBuilder>
-
-				<BuilderSection
-					title="Add your cv here"
-					max={999}
-				></BuilderSection>
+				/>
 			</div>
 		</div>
 	);

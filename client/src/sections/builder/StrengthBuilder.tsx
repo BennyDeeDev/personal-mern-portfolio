@@ -6,6 +6,7 @@ import Input from "../../components/builder/Input";
 import Upload from "../../components/builder/Upload";
 
 export default function StrengthBuilder({ onAdd, onDelete, strengths }) {
+	//TODO: abstract data passing (s to parent)
 	return (
 		<div>
 			<BuilderSection

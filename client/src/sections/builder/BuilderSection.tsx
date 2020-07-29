@@ -5,39 +5,13 @@ import next from "../../images/next.svg";
 
 //TODO: collapse wenn nichts drinne ist aber hinzugefügt wird
 export default function BuilderSection({ title, children, onAdd, section }) {
-	/* 	const [items, setItem] = useState([]); */
 	const [collapse, setCollapse] = useState(false);
-
-	/* useEffect(() => {
-		setItem(data);
-	}, [data]); */
 
 	/* 	useEffect(() => {
 		if (!collapse && counter === 1) setCollapse(true);
 		if (items.length === 0) setCollapse(false);
 	}, [items, collapse]); */
 
-	/* const countItems = () => {
-		let items = [];
-
-		for (let i = 0; i < counter; i++) {
-			if (i < max)
-				items.push(
-					<BuildComponent
-						index={i}
-						key={i}
-						onDelete={() => setItem(counter - 1)}
-					>
-						{children}
-					</BuildComponent>
-				);
-		}
-		return items;
-  }; */
-
-	/* 		const handleAdd = () => {
-		setItem([{ id: uuidv4() }, ...items]);
-	}; */
 	return (
 		<div className="mt-4">
 			<div className="bg-gray-500 rounded-lg p-4">
@@ -54,20 +28,7 @@ export default function BuilderSection({ title, children, onAdd, section }) {
 						/>
 					</button>
 				</div>
-				<div>
-					{collapse
-						? /* 	<BuildComponent
-									id={id}
-									key={index}
-									onDelete={handleDelete}
-                > */
-
-						  children
-						: /* data.map(d => ({ children })) */
-						  /* 	</BuildComponent> */
-
-						  null}
-				</div>
+				<div>{collapse ? children : null}</div>
 				{
 					<button
 						onClick={() => onAdd(section)}
