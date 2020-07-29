@@ -2,7 +2,7 @@ import React from "react";
 import close from "../../images/close.svg";
 import Save from "./Save";
 
-export default function BuildComponent({ children, index, onDelete }) {
+export default function BuildComponent({ children, onDelete, id }) {
 	return (
 		<div className="flex flex-col bg-gray-600 p-4 rounded-lg mb-6 shadow-md ">
 			<div className="flex relative items-center w-full  pb-2">
@@ -10,7 +10,7 @@ export default function BuildComponent({ children, index, onDelete }) {
 					className="absolute right-0 w-4 opacity-50 hover:opacity-100 -mr-2 "
 					src={close}
 					alt=""
-					onClick={() => onDelete(index)}
+					onClick={() => onDelete(id)}
 				/>
 			</div>
 			{children}

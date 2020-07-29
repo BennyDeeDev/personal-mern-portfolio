@@ -24,7 +24,8 @@
 		"react-scroll": "^1.8.0",
 		"react-visibility-sensor": "^5.1.1",
 		"typescript": "^3.7.5",
-		"typewriter-effect": "^2.13.1"
+		"typewriter-effect": "^2.13.1",
+		"uuidv4": "^6.2.0"
 	},
 	"scripts": {
 		"start": "npm run build:css && react-scripts start",

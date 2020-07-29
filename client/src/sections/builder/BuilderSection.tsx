@@ -1,14 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import add from "../../images/add.svg";
-import BuildComponent from "../../components/builder/BuildComponent";
 import Save from "../../components/builder/Save";
 import next from "../../images/next.svg";
 
-export default function BuilderSection({ title, max, children }) {
-	const [counter, setItem] = useState(1);
+//TODO: collapse wenn nichts drinne ist aber hinzugefügt wird
+export default function BuilderSection({
+	title,
+	max,
+	children,
+	onAdd,
+	onDelete
+}) {
+	/* 	const [items, setItem] = useState([]); */
 	const [collapse, setCollapse] = useState(false);
 
-	const countItems = () => {
+	/* useEffect(() => {
+		setItem(data);
+	}, [data]); */
+
+	/* 	useEffect(() => {
+		if (!collapse && counter === 1) setCollapse(true);
+		if (items.length === 0) setCollapse(false);
+	}, [items, collapse]); */
+
+	/* const countItems = () => {
 		let items = [];
 
 		for (let i = 0; i < counter; i++) {
@@ -24,13 +39,11 @@ export default function BuilderSection({ title, max, children }) {
 				);
 		}
 		return items;
-	};
+  }; */
 
-	//TODO: collapse wenn nichts drinne ist aber hinzugefügt wird
-	const handleAdd = () => {
-		if (!collapse) setCollapse(true);
-		setItem(counter + 1);
-	};
+	/* 		const handleAdd = () => {
+		setItem([{ id: uuidv4() }, ...items]);
+	}; */
 
 	return (
 		<div className="mt-4">
@@ -48,13 +61,28 @@ export default function BuilderSection({ title, max, children }) {
 						/>
 					</button>
 				</div>
-				<div>{collapse ? countItems() : null}</div>
-				<button
-					onClick={() => handleAdd()}
-					className="w-full p-2 bg-minimalist-teal bg-opacity-75 rounded-lg text-white flex items-center justify-center hover:bg-opacity-100 transition duration-150 ease-in-out"
-				>
-					<img className="w-6" src={add} alt="" />
-				</button>
+				<div>
+					{collapse
+						? /* 	<BuildComponent
+									id={id}
+									key={index}
+									onDelete={handleDelete}
+                > */
+
+						  children
+						: /* data.map(d => ({ children })) */
+						  /* 	</BuildComponent> */
+
+						  null}
+				</div>
+				{
+					<button
+						onClick={() => onAdd()}
+						className="w-full p-2 bg-minimalist-teal bg-opacity-75 rounded-lg text-white flex items-center justify-center hover:bg-opacity-100 transition duration-150 ease-in-out"
+					>
+						<img className="w-6" src={add} alt="" />
+					</button>
+				}
 				{/* <Save padding="p-3" /> */}
 			</div>
 		</div>
