@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import BuildComponent from "../components/builder/BuildComponent";
 import Input from "../components/builder/Input";
 import Upload from "../components/builder/Upload";
+import StrengthBuilder from "../sections/builder/StrengthBuilder";
 
 //TODO: Datepicker anstatt Time Span Input; floating label
 export default function BackEnd() {
@@ -41,29 +42,25 @@ export default function BackEnd() {
 
 	const [data, setData] = useState(initData);
 
-	/* useEffect(() => {
+	useEffect(() => {
 		setData(initData);
-	}, [data]); */
+	}, []);
 
 	const handleAdd = section => {
-		/* console.log(
-			{...data, ...data[section], { id: uuidv4() }},
-			"add data section"
-		); */
-		/* console.log(data, "pure data add");
 		if (!section || !data) return;
-		setData({ ...data }, [...data[section], { id: uuidv4() }]);
- */
 		setData({ ...data, [section]: [...data[section], { id: uuidv4() }] });
-
-		/* setData(data[section].push({ id: uuidv4() })); */
 	};
 
 	const handleDelete = (id, section) => {
 		console.log(section, data[section]);
 		if (!section || !data) return;
-		setData(data[section].filter(item => item.id !== id));
+		setData({
+			...data,
+			[section]: data[section].filter(item => item.id !== id)
+		});
 	};
+
+	console.log(data);
 
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
@@ -74,24 +71,11 @@ export default function BackEnd() {
 						<Save padding="p-3" />
 					</div>
 				</div>
-				<BuilderSection
-					title="Add a strength here (3 max):"
-					max={3}
+				<StrengthBuilder
+					onDelete={id => handleDelete(id, "strengths")}
 					onAdd={handleAdd}
-					section={"strengths"}
-				>
-					{data.strengths.map((s, index) => (
-						<BuildComponent
-							key={index}
-							onDelete={id => handleDelete(id, "strengths")}
-							id={s.id}
-						>
-							<Input value={s.title} placeholder="Title" />
-							<Upload />
-							<Input value={s.text} placeholder="Text" />
-						</BuildComponent>
-					))}
-				</BuilderSection>
+					strengths={data.strengths}
+				></StrengthBuilder>
 
 				<BuilderSection
 					title="Add your cv here"
