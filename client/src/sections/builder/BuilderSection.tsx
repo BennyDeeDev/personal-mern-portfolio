@@ -2,9 +2,19 @@ import React, { useState, useEffect } from "react";
 import add from "../../images/add.svg";
 import Save from "../../components/builder/Save";
 import next from "../../images/next.svg";
+import BuildComponent from "../../components/builder/BuildComponent";
+import Input from "../../components/builder/Input";
+import Upload from "../../components/builder/Upload";
 
 //TODO: collapse wenn nichts drinne ist aber hinzugefügt wird
-export default function BuilderSection({ title, children, onAdd, section }) {
+export default function BuilderSection({
+	title,
+	onAdd,
+	section,
+	data,
+	onDelete,
+	render
+}) {
 	const [collapse, setCollapse] = useState(false);
 
 	/* 	useEffect(() => {
@@ -28,7 +38,19 @@ export default function BuilderSection({ title, children, onAdd, section }) {
 						/>
 					</button>
 				</div>
-				<div>{collapse ? children : null}</div>
+				<div>
+					{collapse
+						? data.map((d, index) => (
+								<BuildComponent
+									key={index}
+									onDelete={onDelete}
+									id={d.id}
+								>
+									{render(d)}
+								</BuildComponent>
+						  ))
+						: null}
+				</div>
 				{
 					<button
 						onClick={() => onAdd(section)}

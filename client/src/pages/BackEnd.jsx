@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Save from "../components/builder/Save";
 import { v4 as uuidv4 } from "uuid";
-import StrengthBuilder from "../sections/builder/StrengthBuilder";
+
 import Input from "../components/builder/Input";
 import Upload from "../components/builder/Upload";
+import BuilderSection from "../sections/builder/BuilderSection";
 
 //TODO: Datepicker anstatt Time Span Input; floating label
 export default function BackEnd() {
@@ -69,18 +70,21 @@ export default function BackEnd() {
 						<Save padding="p-3" />
 					</div>
 				</div>
-				<StrengthBuilder
-					onDelete={id => handleDelete(id, "strengths")}
+				<BuilderSection
+					title="Add a strength here (3 max):"
+					/* max={3} */
 					onAdd={handleAdd}
-					strengths={data.strengths}
-					render={s => (
+					section={"strengths"}
+					onDelete={id => handleDelete(id, "strengths")}
+					data={data.strengths}
+					render={d => (
 						<div>
-							<Input value={s.title || ""} placeholder="Title" />
+							<Input value={d.title || ""} placeholder="Title" />
 							<Upload />
-							<Input value={s.text || ""} placeholder="Text" />
+							<Input value={d.text || ""} placeholder="Text" />
 						</div>
 					)}
-				></StrengthBuilder>
+				></BuilderSection>
 			</div>
 		</div>
 	);
