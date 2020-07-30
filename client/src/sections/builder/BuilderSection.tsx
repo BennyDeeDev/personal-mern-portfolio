@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import add from "../../images/add.svg";
-import Save from "../../components/builder/Save";
 import next from "../../images/next.svg";
 import BuildComponent from "../../components/builder/BuildComponent";
-import Input from "../../components/builder/Input";
-import Upload from "../../components/builder/Upload";
 
-//TODO: collapse wenn nichts drinne ist aber hinzugefügt wird
 export default function BuilderSection({
 	title,
 	onAdd,
@@ -17,17 +13,20 @@ export default function BuilderSection({
 }) {
 	const [collapse, setCollapse] = useState(false);
 
-	/* 	useEffect(() => {
-		if (!collapse && counter === 1) setCollapse(true);
-		if (items.length === 0) setCollapse(false);
-	}, [items, collapse]); */
+	useEffect(() => {
+		if (!collapse && data.length) setCollapse(true);
+		if (data.length === 0) setCollapse(false);
+	}, [data]);
 
 	return (
 		<div className="mt-4">
 			<div className="bg-gray-500 rounded-lg p-4">
 				<div className="flex items-center relative pb-2">
 					<h4 className=" text-white ">{title}</h4>
-					<button className="bg-white rounded-full absolute right-0 p-1 ">
+					<button
+						className="bg-white rounded-full absolute right-0 p-1"
+						disabled={data}
+					>
 						<img
 							onClick={() => setCollapse(!collapse)}
 							className={`w-4 transform transition duration-300 ease-in-out ${

@@ -84,7 +84,7 @@ export default function BackEnd() {
 							<Input value={d.text || ""} placeholder="Text" />
 						</div>
 					)}
-				></BuilderSection>
+				/>
 			</div>
 		</div>
 	);
