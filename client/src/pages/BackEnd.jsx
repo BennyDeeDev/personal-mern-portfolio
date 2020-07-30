@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Save from "../components/builder/Save";
 import { v4 as uuidv4 } from "uuid";
 import StrengthBuilder from "../sections/builder/StrengthBuilder";
+import Input from "../components/builder/Input";
+import Upload from "../components/builder/Upload";
 
 //TODO: Datepicker anstatt Time Span Input; floating label
 export default function BackEnd() {
@@ -54,6 +56,10 @@ export default function BackEnd() {
 		});
 	};
 
+	const passChildren = s => {
+		return <div></div>;
+	};
+
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
 			<div className=" max-w-screen-md bg-gray-300 p-4">
@@ -67,7 +73,14 @@ export default function BackEnd() {
 					onDelete={id => handleDelete(id, "strengths")}
 					onAdd={handleAdd}
 					strengths={data.strengths}
-				/>
+					render={s => (
+						<div>
+							<Input value={s.title || ""} placeholder="Title" />
+							<Upload />
+							<Input value={s.text || ""} placeholder="Text" />
+						</div>
+					)}
+				></StrengthBuilder>
 			</div>
 		</div>
 	);
