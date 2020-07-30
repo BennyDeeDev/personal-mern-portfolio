@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Input({ placeholder, value }) {
+export default function TextArea({ value, placeholder }) {
 	const [input, setInput] = useState("");
 
 	useEffect(() => {
@@ -9,11 +9,10 @@ export default function Input({ placeholder, value }) {
 
 	return (
 		<div className="py-2">
-			<input
+			<textarea
 				onChange={e => setInput(e.target.value)}
 				value={input}
-				className="form-input p-2 w-full rounded-lg"
-				type="text"
+				className="form-textarea p-2 w-full rounded-lg"
 				placeholder={placeholder}
 			/>
 		</div>

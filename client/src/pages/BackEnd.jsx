@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import Input from "../components/builder/Input";
 import Upload from "../components/builder/Upload";
 import BuilderSection from "../sections/builder/BuilderSection";
+import TextArea from "../components/builder/TextArea";
 
 //TODO: Datepicker anstatt Time Span Input; floating label
 export default function BackEnd() {
@@ -40,9 +41,9 @@ export default function BackEnd() {
 
 	const [data, setData] = useState(initData);
 
-	useEffect(() => {
+	/* 	useEffect(() => {
 		setData(initData);
-	}, []);
+	}, []); */
 
 	const handleAdd = section => {
 		if (!section || !data) return;
@@ -55,10 +56,6 @@ export default function BackEnd() {
 			...data,
 			[section]: data[section].filter(item => item.id !== id)
 		});
-	};
-
-	const passChildren = s => {
-		return <div></div>;
 	};
 
 	return (
@@ -82,6 +79,35 @@ export default function BackEnd() {
 							<Input value={d.title || ""} placeholder="Title" />
 							<Upload />
 							<Input value={d.text || ""} placeholder="Text" />
+						</div>
+					)}
+				/>
+				<BuilderSection
+					title="Add your cv here:"
+					/* max={3} */
+					onAdd={handleAdd}
+					section={"cv"}
+					onDelete={id => handleDelete(id, "cv")}
+					data={data.cv}
+					render={d => (
+						<div>
+							<Input
+								value={d.title || ""}
+								placeholder="Your Job (e.g Frontend Developer at Microsoft)"
+							/>
+							<Input
+								value={d.timespan || ""}
+								placeholder="Timespan of the job (e.g August 2020 - December 2020"
+							/>
+							<Input
+								value={d.location || ""}
+								placeholder="Location of the job(e.g San Francisco)"
+							/>
+							<Upload />
+							<TextArea
+								value={d.text || ""}
+								placeholder="Job Description (e.g programmed Vue Components for new GitHub SPA"
+							/>
 						</div>
 					)}
 				/>
