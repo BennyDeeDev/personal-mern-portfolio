@@ -7,24 +7,23 @@ import Upload from "../components/builder/Upload";
 import BuilderSection from "../sections/builder/BuilderSection";
 import TextArea from "../components/builder/TextArea";
 
-//TODO: Datepicker anstatt Time Span Input; floating label
 export default function BackEnd() {
 	const initData = {
 		strengths: [
 			{
 				id: uuidv4(),
-				svg: null,
+				image: null,
 				title: "minimalistisch",
-				text: "kein clutter"
-			}
+				text: "kein clutter",
+			},
 		],
 		skills: [
 			{
 				id: uuidv4(),
-				svg: null,
+				image: null,
 				text: "React",
-				progress: "80%"
-			}
+				progress: "80%",
+			},
 		],
 		cv: [
 			{
@@ -34,9 +33,9 @@ export default function BackEnd() {
 				location: "WebSix GmbH in Backnang",
 				text:
 					"Pflegen von Landing Pages mit HTML, Stylen von Landing Pages mit Tailwind CSS und/oder Sass, Programmierung eines Beleg-Prüfers in Vue.js",
-				tags: ["Frontend"]
-			}
-		]
+				tags: ["Frontend"],
+			},
+		],
 	};
 
 	const [data, setData] = useState(initData);
@@ -45,7 +44,7 @@ export default function BackEnd() {
 		setData(initData);
 	}, []); */
 
-	const handleAdd = section => {
+	const handleAdd = (section) => {
 		if (!section || !data) return;
 		setData({ ...data, [section]: [...data[section], { id: uuidv4() }] });
 	};
@@ -54,8 +53,25 @@ export default function BackEnd() {
 		if (!section || !data) return;
 		setData({
 			...data,
-			[section]: data[section].filter(item => item.id !== id)
+			[section]: data[section].filter((item) => item.id !== id),
 		});
+	};
+
+	const handleUpload = (e, id, section) => {
+		console.log(e.target.files[0]);
+		let copyOfArray = [...data[section]];
+
+		let indexOfData = copyOfArray.findIndex((d) => d.id === id);
+		copyOfArray[indexOfData] = {
+			...copyOfArray[indexOfData],
+			image: e.target.files[0],
+		};
+		console.log(copyOfArray);
+		setData({
+			...data,
+			[section]: [copyOfArray],
+		});
+		console.log(data);
 	};
 
 	return (
@@ -72,12 +88,12 @@ export default function BackEnd() {
 					/* max={3} */
 					onAdd={handleAdd}
 					section={"strengths"}
-					onDelete={id => handleDelete(id, "strengths")}
+					onDelete={(id) => handleDelete(id, "strengths")}
 					data={data.strengths}
-					render={d => (
+					render={(d) => (
 						<div>
 							<Input value={d.title || ""} placeholder="Title" />
-							<Upload />
+							<Upload id={d.id} onUpload={handleUpload} section={"strengths"} />
 							<Input value={d.text || ""} placeholder="Text" />
 						</div>
 					)}
@@ -87,27 +103,36 @@ export default function BackEnd() {
 					/* max={3} */
 					onAdd={handleAdd}
 					section={"cv"}
-					onDelete={id => handleDelete(id, "cv")}
+					onDelete={(id) => handleDelete(id, "cv")}
 					data={data.cv}
-					render={d => (
+					render={(d) => (
 						<div>
-							<Input
-								value={d.title || ""}
-								placeholder="Your Job (e.g Frontend Developer at Microsoft)"
-							/>
+							<Input value={d.title || ""} placeholder="Your Job (e.g Frontend Developer at Microsoft)" />
 							<Input
 								value={d.timespan || ""}
 								placeholder="Timespan of the job (e.g August 2020 - December 2020"
 							/>
-							<Input
-								value={d.location || ""}
-								placeholder="Location of the job(e.g San Francisco)"
-							/>
-							<Upload />
+							<Input value={d.location || ""} placeholder="Location of the job(e.g San Francisco)" />
+							<Upload onUpload={handleUpload} />
 							<TextArea
 								value={d.text || ""}
 								placeholder="Job Description (e.g programmed Vue Components for new GitHub SPA"
 							/>
+						</div>
+					)}
+				/>
+
+				<BuilderSection
+					title="Add your skills here"
+					onAdd={handleAdd}
+					section={"skills"}
+					onDelete={(id) => handleDelete(id, "cv")}
+					data={data.skills}
+					render={(d) => (
+						<div>
+							<Input value={d.text || ""} placeholder="List your Skill here" />
+							<Upload onUpload={handleUpload} />
+							<Input value={d.progress || ""} placeholder="rate yourself from 0 to 100%" />
 						</div>
 					)}
 				/>

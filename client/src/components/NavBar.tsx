@@ -18,17 +18,13 @@ export default function NavBar() {
 						to={nav.id}
 						spy={true}
 						smooth={true}
-						offset={-100}
-					>
+						offset={-100}>
 						{nav.text}
 					</Link>
 				</div>
 			</div>
 		));
 	};
-
-	/* import Reveal from "react-reveal/Reveal";
-	TODO: animate open and close ? https://www.npmjs.com/package/react-responsive !load svgs with navbar !mobile höhrere offset vom smooth scrolling */
 
 	const navHamburger = () => {
 		return (
