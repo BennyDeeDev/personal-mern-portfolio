@@ -58,7 +58,6 @@ export default function BackEnd() {
 	};
 
 	const handleUpload = (e, id, section) => {
-		console.log(e.target.files[0]);
 		let copyOfArray = [...data[section]];
 
 		let indexOfData = copyOfArray.findIndex((d) => d.id === id);
@@ -66,14 +65,12 @@ export default function BackEnd() {
 			...copyOfArray[indexOfData],
 			image: e.target.files[0],
 		};
-		console.log(copyOfArray);
 		setData({
 			...data,
-			[section]: [copyOfArray],
+			[section]: copyOfArray,
 		});
-		console.log(data);
 	};
-
+	console.log(data);
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
 			<div className=" max-w-screen-md bg-gray-300 p-4">
@@ -92,9 +89,9 @@ export default function BackEnd() {
 					data={data.strengths}
 					render={(d) => (
 						<div>
-							<Input value={d.title || ""} placeholder="Title" />
+							<Input value={d.title} placeholder="Title" />
 							<Upload id={d.id} onUpload={handleUpload} section={"strengths"} />
-							<Input value={d.text || ""} placeholder="Text" />
+							<Input value={d.text} placeholder="Text" />
 						</div>
 					)}
 				/>
