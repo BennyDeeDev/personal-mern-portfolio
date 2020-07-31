@@ -3,14 +3,15 @@ const mongoose = require("mongoose");
 const StrengthSchema = new mongoose.Schema({
 	title: {
 		type: String,
-		required: true
+		required: true,
 	},
 	image: {
-		type: String
+		type: String,
 	},
 	text: {
-		type: String
-	}
+		type: String,
+	},
 });
 
-module.exports = mongoose.model("Strength", StrengthSchema);
+exports.StrengthSchema = StrengthSchema;
+exports.Strength = mongoose.model("Strength", StrengthSchema);

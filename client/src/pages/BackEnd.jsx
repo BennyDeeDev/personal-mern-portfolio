@@ -91,6 +91,7 @@ export default function BackEnd() {
 						<div>
 							<Input value={d.title} placeholder="Title" />
 							<Upload id={d.id} onUpload={handleUpload} section={"strengths"} />
+							<div className="text-2xl text-green-800">{d.image ? d.image.name + " uploaded" : null}</div>
 							<Input value={d.text} placeholder="Text" />
 						</div>
 					)}

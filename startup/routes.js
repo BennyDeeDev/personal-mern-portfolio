@@ -6,6 +6,7 @@ const cv = require("../routes/cv");
 const links = require("../routes/links");
 const user = require("../routes/user");
 const upload = require("../routes/upload");
+const data = require("../routes/data");
 
 module.exports = function (app) {
 	app.use(express.json());
@@ -15,4 +16,5 @@ module.exports = function (app) {
 	app.use("/api/user/links", links);
 	app.use("/api/user", user);
 	app.use("/api/upload", upload);
+	app.use("/api/user/data", data);
 };

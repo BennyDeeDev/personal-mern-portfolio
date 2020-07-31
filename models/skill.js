@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 
 const SkillSchema = new mongoose.Schema({
-	svgPath: String,
+	image: String,
 	text: String,
 	progress: String,
 	tag: String,
 });
 
-module.exports = mongoose.model("Skill", SkillSchema);
+exports.SkillSchema = SkillSchema;
+exports.Skill = mongoose.model("Skill", SkillSchema);

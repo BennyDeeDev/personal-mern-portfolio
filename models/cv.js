@@ -4,13 +4,14 @@ const CvSchema = new mongoose.Schema({
 	title: String,
 	timespan: {
 		type: String,
-		required: true
+		required: true,
 	},
 	location: {
 		type: String,
-		required: true
+		required: true,
 	},
-	text: String
+	text: String,
 });
 
-module.exports = mongoose.model("Cv", CvSchema);
+exports.CvSchema = CvSchema;
+exports.Cv = mongoose.model("Cv", CvSchema);
