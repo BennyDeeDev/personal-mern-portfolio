@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import BackendService from "../services/BackendService";
 import { Redirect } from "react-router-dom";
+import AuthToken from "../services/AuthToken";
 
 export default function LoginPage() {
 	const { register, errors, handleSubmit } = useForm();
 	const [loginError, setLoginError] = useState("");
 	const [loggedIn, setLoggedIn] = useState(false);
 
-	const onSubmit = (data) => {
+	const onSubmit = (credentials) => {
 		setLoginError("");
-		BackendService.login(data)
+		BackendService.login(credentials)
 			.then(({ data }) => {
 				setLoggedIn(true);
-				localStorage.setItem("key", data);
+				console.log(data);
+				AuthToken.setAuthToken(data);
 			})
 			.catch((Error) => setLoginError(Error.response.data));
 	};

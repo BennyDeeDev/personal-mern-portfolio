@@ -44,7 +44,7 @@ export default function BackEnd() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const { data } = await BackendService.getUserData();
+			const { data } = await BackendService.fetchUserData();
 			console.log(data, "data");
 			setState(data);
 		};
@@ -77,7 +77,12 @@ export default function BackEnd() {
 			[section]: copyOfArray,
 		});
 	};
-	console.log(state.strengths);
+
+	const handleSave = () => {
+		BackendService.saveUserData(state).then((Response) => {
+			console.log(Response);
+		});
+	};
 
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
@@ -85,7 +90,7 @@ export default function BackEnd() {
 				<div className="flex items-center relative">
 					<h1>Backend Page Builder</h1>
 					<div className="absolute right-0">
-						<Save padding="p-3" />
+						<Save onSave={handleSave} padding="p-3" />
 					</div>
 				</div>
 				<BuilderSection

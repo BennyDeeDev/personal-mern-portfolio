@@ -9,6 +9,8 @@ const apiClient = axios.create({
 	timeout: 10000,
 });
 
+export const api = apiClient;
+
 apiClient.interceptors.response.use(
 	(res) => res,
 	(err) => {
@@ -23,7 +25,10 @@ export default {
 	login(credentials) {
 		return apiClient.post("/user/auth", credentials);
 	},
-	getUserData() {
+	fetchUserData() {
 		return apiClient.get("/user/data");
+	},
+	saveUserData(payload) {
+		return apiClient.post("/user/data", payload);
 	},
 };
