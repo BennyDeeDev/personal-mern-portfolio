@@ -25,21 +25,22 @@ var storage = multer.diskStorage({
 		callback(null, "./client/src/images/");
 	},
 	filename: function (req, file, callback) {
-		callback(null, file.fieldname + "-" + Date.now());
+		callback(null, Date.now() + "-" + file.originalname);
 	},
 });
 var upload = multer({ storage: storage }).single("image");
 
-router.get("/", function (req, res) {
-	res.sendFile(__dirname + "/index.html");
-});
-
-router.post("/upload", function (req, res) {
+router.post("/", (req, res) => {
 	upload(req, res, function (err) {
 		if (err) {
-			return res.end("Error uploading file.");
+			return res.end({
+				status: "error uploading file",
+			});
 		}
-		res.end("File is uploaded");
+		res.send({
+			status: "file uploaded",
+			filename: req.file.path,
+		});
 	});
 });
 
