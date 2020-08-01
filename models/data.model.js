@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const { CvSchema } = require("./cv");
-const { StrengthSchema } = require("./strength");
-const { SkillSchema } = require("./skill");
+const { CvSchema } = require("./cv.model");
+const { StrengthSchema } = require("./strength.model");
+const { SkillSchema } = require("./skill.model");
 
 const UserDataSchema = new mongoose.Schema({
 	skills: {
@@ -11,7 +11,7 @@ const UserDataSchema = new mongoose.Schema({
 	strengths: {
 		type: [StrengthSchema],
 	},
-	cvs: {
+	cv: {
 		type: [CvSchema],
 	},
 });

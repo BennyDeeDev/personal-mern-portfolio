@@ -3,7 +3,7 @@ package-lock.json
 client/src/styles/index.scss 
 .env
 
-/logs
+logs/
 
 jwtRS256.key
 jwtRS256.key.pub

@@ -1,5 +1,5 @@
-const { createLogger, format, transports } = require("winston");
-const { combine, timestamp, prettyPrint, colorize, json, simple } = format;
+/* const { createLogger, format, transports } = require("winston");
+const { combine, timestamp, prettyPrint, colorize, json, simple } = format; */
 // require('winston-mongodb');
 
 /* module.exports = function () {
@@ -20,18 +20,16 @@ const { combine, timestamp, prettyPrint, colorize, json, simple } = format;
 };
  */
 
-const logger = createLogger({
+/* const logger = createLogger({
 	transports: [
 		new transports.Console({
-			format: combine(colorize(), simple(), prettyPrint())
+			format: combine(colorize(), simple(), prettyPrint()),
 		}),
-		new transports.File({ filename: "./logs/error.log", level: "error" })
-	]
+		new transports.File({ filename: "./logs/error.log", level: "error" }),
+	],
 });
 
-logger.exceptions.handle(
-	new transports.Console(simple()),
-	new transports.File({ filename: "./logs/exceptions.log" })
-);
+logger.exceptions.handle(new transports.Console(), new transports.File({ filename: "./logs/exceptions.log" }));
 
 module.exports = logger;
+ */

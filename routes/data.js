@@ -4,9 +4,9 @@ const { check, body, validationResult, custom } = require("express-validator");
 const auth = require("../middleware/auth");
 
 const Data = require("../models/data.model");
-const { Strength } = require("../models/strength");
-const { Cv } = require("../models/cv");
-const { Skill } = require("../models/skill");
+const { Strength } = require("../models/strength.model");
+const { Cv } = require("../models/cv.model");
+const { Skill } = require("../models/skill.model");
 
 router.get("/", async (req, res) => {
 	try {
@@ -30,37 +30,48 @@ router.post("/", [auth], async (req, res) => {
 		res.status(500).json("Server Error");
 	}
 
-	const strengths = req.body.strengths.map((s) => {
-		const strength = new Strength({
-			title: s.title,
-			image: s.image,
-			text: s.text,
+	if (req.body.strengths) {
+		var strengths = req.body.strengths.map((s) => {
+			const strength = new Strength({
+				title: s.title,
+				image: s.image,
+				text: s.text,
+			});
+			return strength;
 		});
-		return strength;
-	});
+	}
 
-	const skills = req.body.skills.map((s) => {
-		const skill = new Skill({
-			text: s.text,
-			progress: s.progress || null,
-			image: null,
-			tag: s.tag || null,
+	if (req.body.skills) {
+		var skills = req.body.skills.map((s) => {
+			const skill = new Skill({
+				text: s.text,
+				progress: s.progress || null,
+				image: null,
+				tag: s.tag || null,
+			});
+			return skill;
 		});
-		return skill;
-	});
+	}
 
-	const cvs = req.body.cv.map((s) => {
-		const cv = new Cv({
-			title: s.title,
-			timespan: s.timespan,
-			location: s.location,
-			text: s.text,
+	if (req.body.cv) {
+		var cv = req.body.cv.map(async (s) => {
+			try {
+				var cvItem = new Cv({
+					title: s.title,
+					timespan: s.timespan,
+					location: s.location,
+					text: s.text,
+				});
+			} catch (error) {
+				res.status(500).json("Server Error");
+			}
+
+			return cvItem;
 		});
-		return cv;
-	});
+	}
 
 	const data = new Data({
-		cvs,
+		cv,
 		skills,
 		strengths,
 	});
@@ -71,7 +82,7 @@ router.post("/", [auth], async (req, res) => {
 		console.log(error, "error");
 	}
 	res.send(data);
-	console.log(data);
+	console.log(data, "data");
 });
 
 module.exports = router;

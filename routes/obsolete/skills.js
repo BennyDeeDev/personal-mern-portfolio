@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const { check, body, validationResult, custom } = require("express-validator");
 
-const Skill = require("../models/skill");
-const upload = require("../middleware/upload");
+const Skill = require("../../models/skill");
+const upload = require("../../middleware/upload");
 
 router.get("/", async (req, res) => {
 	try {
@@ -27,12 +27,12 @@ router.post("/", async (req, res) => {
 		res.status(500).json("Server Error");
 	}
 
-	return req.body.skills.forEach(async s => {
+	return req.body.skills.forEach(async (s) => {
 		const skill = new Skill({
 			text: s.text,
 			progress: s.progress || null,
 			svgPath: null,
-			tag: s.tag || null
+			tag: s.tag || null,
 		});
 		try {
 			await skill.save();
