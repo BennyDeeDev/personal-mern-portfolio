@@ -11,7 +11,7 @@ const { Skill } = require("../models/skill.model");
 router.get("/", async (req, res) => {
 	try {
 		const data = await Data.find();
-		res.send(data);
+		res.send(...data);
 	} catch (error) {
 		console.log(error);
 		return res.status(500).json("Server Error");
@@ -29,7 +29,7 @@ router.post("/", [auth], async (req, res) => {
 	} catch (error) {
 		res.status(500).json("Server Error");
 	}
-
+	console.log(req.body);
 	if (req.body.strengths) {
 		var strengths = req.body.strengths.map((s) => {
 			const strength = new Strength({
@@ -54,17 +54,13 @@ router.post("/", [auth], async (req, res) => {
 	}
 
 	if (req.body.cv) {
-		var cv = req.body.cv.map(async (s) => {
-			try {
-				var cvItem = new Cv({
-					title: s.title,
-					timespan: s.timespan,
-					location: s.location,
-					text: s.text,
-				});
-			} catch (error) {
-				res.status(500).json("Server Error");
-			}
+		var cv = req.body.cv.map((s) => {
+			const cvItem = new Cv({
+				title: s.title,
+				timespan: s.timespan,
+				location: s.location,
+				text: s.text,
+			});
 
 			return cvItem;
 		});

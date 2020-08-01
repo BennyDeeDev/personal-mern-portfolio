@@ -23,4 +23,7 @@ export default {
 	login(credentials) {
 		return apiClient.post("/user/auth", credentials);
 	},
+	getUserData() {
+		return apiClient.get("/user/data");
+	},
 };
