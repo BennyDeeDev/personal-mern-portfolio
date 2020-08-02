@@ -6,7 +6,7 @@ const StrengthSchema = new mongoose.Schema({
 		required: true,
 	},
 	image: {
-		type: String,
+		type: Object,
 	},
 	text: {
 		type: String,

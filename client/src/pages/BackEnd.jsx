@@ -10,6 +10,8 @@ import BackendService, { api } from "../services/BackendService";
 
 import { toast } from "react-toastify";
 
+import { get, isEmpty } from "lodash";
+
 import "react-toastify/dist/ReactToastify.css";
 import { Redirect } from "react-router-dom";
 
@@ -73,7 +75,7 @@ export default function BackEnd() {
 			let indexOfData = copyOfArray.findIndex((d) => d.id === id);
 			copyOfArray[indexOfData] = {
 				...copyOfArray[indexOfData],
-				imageName: data.file.originalname,
+				image: { name: data.file.originalname, path: data.file.path },
 			};
 			setState({
 				...state,
@@ -114,7 +116,7 @@ export default function BackEnd() {
 				})
 			);
 	};
-
+	console.log(state);
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
 			{logOut ? <Redirect to="/login" /> : null}
@@ -136,12 +138,8 @@ export default function BackEnd() {
 					render={(d) => (
 						<div>
 							<Input value={d.title} placeholder="Title" />
-							<Upload id={d.id} onUpload={handleUpload} section={"strengths"} />
-							{d.imageName ? (
-								<div className="text-xl ml-4 inline-block text-minimalist-lime px-2 bg-white rounded-full border border-green-600">
-									{d.imageName + " uploaded"}
-								</div>
-							) : null}
+							<Upload id={d.id} onUpload={handleUpload} section={"strengths"} image={d.image} />
+
 							<Input value={d.text} placeholder="Text" />
 						</div>
 					)}
@@ -161,7 +159,7 @@ export default function BackEnd() {
 								placeholder="Timespan of the job (e.g August 2020 - December 2020"
 							/>
 							<Input value={d.location || ""} placeholder="Location of the job(e.g San Francisco)" />
-							<Upload onUpload={handleUpload} />
+
 							<TextArea
 								value={d.text || ""}
 								placeholder="Job Description (e.g programmed Vue Components for new GitHub SPA"

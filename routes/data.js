@@ -46,7 +46,7 @@ router.post("/", [auth], async (req, res) => {
 			const skill = new Skill({
 				text: s.text,
 				progress: s.progress || null,
-				image: null,
+				image: s.image,
 				tag: s.tag || null,
 			});
 			return skill;

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const SkillSchema = new mongoose.Schema({
-	image: String,
+	image: Object,
 	text: String,
 	progress: String,
 	tag: String,

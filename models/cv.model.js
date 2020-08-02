@@ -4,7 +4,6 @@ const CvSchema = new mongoose.Schema({
 	title: String,
 	timespan: String,
 	location: String,
-
 	text: String,
 });
 
