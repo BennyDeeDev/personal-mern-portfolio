@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import NotFound from "./pages/NotFound";
 import { Switch, Route } from "react-router-dom";
 import BackEnd from "./pages/BackEnd";
+import { ToastContainer } from "react-toastify";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<LoginPage />
 				</Route>
 				<Route exact path="/backend">
+					<ToastContainer />
 					<BackEnd />
 				</Route>
 				<Route path="*">

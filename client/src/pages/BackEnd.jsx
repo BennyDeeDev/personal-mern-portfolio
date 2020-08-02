@@ -7,39 +7,12 @@ import Upload from "../components/builder/Upload";
 import BuilderSection from "../sections/builder/BuilderSection";
 import TextArea from "../components/builder/TextArea";
 import BackendService from "../services/BackendService";
-import { isEmpty } from "lodash";
+
+import { toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 export default function BackEnd() {
-	/* 	const initData = {
-		strengths: [
-			{
-				id: uuidv4(),
-				image: null,
-				title: "minimalistisch",
-				text: "kein clutter",
-			},
-		],
-		skills: [
-			{
-				id: uuidv4(),
-				image: null,
-				text: "React",
-				progress: "80%",
-			},
-		],
-		cv: [
-			{
-				id: uuidv4(),
-				title: "Praktikum in der Frontend Entwicklung",
-				timespan: "2020 Mai - 2020 August",
-				location: "WebSix GmbH in Backnang",
-				text:
-					"Pflegen von Landing Pages mit HTML, Stylen von Landing Pages mit Tailwind CSS und/oder Sass, Programmierung eines Beleg-Prüfers in Vue.js",
-				tags: ["Frontend"],
-			},
-		],
-	}; */
-
 	const [state, setState] = useState({});
 
 	useEffect(() => {
@@ -79,9 +52,29 @@ export default function BackEnd() {
 	};
 
 	const handleSave = () => {
-		BackendService.saveUserData(state).then((Response) => {
-			console.log(Response);
-		});
+		BackendService.saveUserData(state)
+			.then(() => {
+				toast.success("Data Saved", {
+					position: "top-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			})
+			.catch(() =>
+				toast.error("Uh, oh something went wrong", {
+					position: "top-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				})
+			);
 	};
 
 	return (
