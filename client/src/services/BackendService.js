@@ -21,4 +21,7 @@ export default {
 	saveUserData(payload) {
 		return apiClient.post("/user/data", payload);
 	},
+	uploadImage(payload) {
+		return apiClient.post("/user/upload", payload);
+	},
 };

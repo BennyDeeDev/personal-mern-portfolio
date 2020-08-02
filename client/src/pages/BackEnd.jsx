@@ -51,7 +51,7 @@ export default function BackEnd() {
 	};
 
 	const handleUpload = (e, id, section) => {
-		let copyOfArray = [...state[section]];
+		/* let copyOfArray = [...state[section]];
 
 		let indexOfData = copyOfArray.findIndex((d) => d.id === id);
 		copyOfArray[indexOfData] = {
@@ -61,6 +61,13 @@ export default function BackEnd() {
 		setState({
 			...state,
 			[section]: copyOfArray,
+		}); */
+
+		const imageForm = new FormData();
+		imageForm.append("image", e.target.files[0]);
+
+		BackendService.uploadImage(imageForm).then((Response) => {
+			console.log(Response);
 		});
 	};
 
