@@ -6,13 +6,26 @@ import Input from "../components/builder/Input";
 import Upload from "../components/builder/Upload";
 import BuilderSection from "../sections/builder/BuilderSection";
 import TextArea from "../components/builder/TextArea";
-import BackendService from "../services/BackendService";
+import BackendService, { api } from "../services/BackendService";
 
 import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+import { Redirect } from "react-router-dom";
 
 export default function BackEnd() {
+	const [logOut, setLogOut] = useState(false);
+
+	api.interceptors.response.use(
+		(res) => res,
+		(err) => {
+			if (err.response.status === 401) {
+				setLogOut(true);
+			}
+			return Promise.reject(err);
+		}
+	);
+
 	const [state, setState] = useState({});
 
 	useEffect(() => {
@@ -79,6 +92,7 @@ export default function BackEnd() {
 
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
+			{logOut ? <Redirect to="/login" /> : null}
 			<div className=" max-w-screen-md bg-gray-300 p-4">
 				<div className="flex items-center relative">
 					<h1>Backend Page Builder</h1>

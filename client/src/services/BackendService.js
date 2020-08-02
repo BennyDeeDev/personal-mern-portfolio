@@ -11,16 +11,6 @@ const apiClient = axios.create({
 
 export const api = apiClient;
 
-apiClient.interceptors.response.use(
-	(res) => res,
-	(err) => {
-		if (err.response.status === 401) {
-			console.log("logout");
-		}
-		return Promise.reject(err);
-	}
-);
-
 export default {
 	login(credentials) {
 		return apiClient.post("/user/auth", credentials);
