@@ -75,7 +75,7 @@ export default function BackEnd() {
 			let indexOfData = copyOfArray.findIndex((d) => d.id === id);
 			copyOfArray[indexOfData] = {
 				...copyOfArray[indexOfData],
-				image: { name: data.file.originalname, path: data.file.path },
+				image: { name: data.file.originalname, fieldname: data.file.filename },
 			};
 			setState({
 				...state,
@@ -177,7 +177,7 @@ export default function BackEnd() {
 					render={(d) => (
 						<div>
 							<Input value={d.text || ""} placeholder="List your Skill here" />
-							<Upload onUpload={handleUpload} />
+							<Upload id={d.id} onUpload={handleUpload} section={"skills"} image={d.image} />
 							<Input value={d.progress || ""} placeholder="rate yourself from 0 to 100%" />
 						</div>
 					)}
