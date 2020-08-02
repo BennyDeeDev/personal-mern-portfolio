@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import Save from "../components/builder/Save";
 import { v4 as uuidv4 } from "uuid";
 
@@ -66,8 +66,26 @@ export default function BackEnd() {
 		const imageForm = new FormData();
 		imageForm.append("image", e.target.files[0]);
 
-		BackendService.uploadImage(imageForm).then((Response) => {
-			console.log(Response);
+		BackendService.uploadImage(imageForm).then(({ data }) => {
+			console.log(data.file);
+			let copyOfArray = [...state[section]];
+
+			let indexOfData = copyOfArray.findIndex((d) => d.id === id);
+			copyOfArray[indexOfData] = {
+				...copyOfArray[indexOfData],
+				imageName: data.file.originalname,
+			};
+			setState({
+				...state,
+				[section]: copyOfArray,
+			});
+
+			/* //Hacky Way of dynamically showing images when uploading, --> Backend needs to send when done uploading
+			setTimeout(() => {
+				const img = require.context("../images/", true);
+				let i = img("./" + data.file.filename);
+				setImage(i);
+			}, 5000); */
 		});
 	};
 
@@ -100,6 +118,7 @@ export default function BackEnd() {
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
 			{logOut ? <Redirect to="/login" /> : null}
+
 			<div className=" max-w-screen-md bg-gray-300 p-4">
 				<div className="flex items-center relative">
 					<h1>Backend Page Builder</h1>
@@ -118,7 +137,11 @@ export default function BackEnd() {
 						<div>
 							<Input value={d.title} placeholder="Title" />
 							<Upload id={d.id} onUpload={handleUpload} section={"strengths"} />
-							<div className="text-2xl text-green-800">{d.image ? d.image.name + " uploaded" : null}</div>
+							{d.imageName ? (
+								<div className="text-xl ml-4 inline-block text-minimalist-lime px-2 bg-white rounded-full border border-green-600">
+									{d.imageName + " uploaded"}
+								</div>
+							) : null}
 							<Input value={d.text} placeholder="Text" />
 						</div>
 					)}

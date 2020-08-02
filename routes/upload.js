@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
 		}
 		res.send({
 			status: "file uploaded",
-			filename: req.file.path,
+			file: req.file,
 		});
 	});
 });
