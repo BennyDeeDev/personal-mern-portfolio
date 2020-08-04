@@ -41,7 +41,7 @@ export default function BuilderSection({ title, onAdd, section, state, onDelete,
 				</div>
 				{
 					<button
-						onClick={() => onAdd(section)}
+						onClick={onAdd}
 						className="w-full p-2 bg-minimalist-teal bg-opacity-75 rounded-lg text-white flex items-center justify-center hover:bg-opacity-100 transition duration-150 ease-in-out">
 						<img className="w-6" src={add} alt="" />
 					</button>

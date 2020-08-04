@@ -33,19 +33,17 @@ export default function BackEnd() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const { data } = await BackendService.fetchUserData();
-			console.log(data, "data");
+
 			setState(data);
 		};
 		fetchData();
 	}, []);
 
-	const handleAdd = (section) => {
-		if (!section || !state) return;
-		setState({ ...state, [section]: [...state[section], { id: uuidv4() }] });
+	const handleAdd = (section, fields) => {
+		setState({ ...state, [section]: [...state[section], fields] });
 	};
 
 	const handleDelete = (id, section) => {
-		if (!section || !state) return;
 		setState({
 			...state,
 			[section]: state[section].filter((item) => item.id !== id),
@@ -53,18 +51,6 @@ export default function BackEnd() {
 	};
 
 	const handleUpload = (e, id, section) => {
-		/* let copyOfArray = [...state[section]];
-
-		let indexOfData = copyOfArray.findIndex((d) => d.id === id);
-		copyOfArray[indexOfData] = {
-			...copyOfArray[indexOfData],
-			image: e.target.files[0],
-		};
-		setState({
-			...state,
-			[section]: copyOfArray,
-		}); */
-
 		const imageForm = new FormData();
 		imageForm.append("image", e.target.files[0]);
 
@@ -117,6 +103,7 @@ export default function BackEnd() {
 			);
 	};
 	console.log(state);
+	//TODO: https://stackoverflow.com/questions/27864951/how-to-access-childs-state-in-react
 	return (
 		<div className="max-w-screen-xl px-4 py-8">
 			{logOut ? <Redirect to="/login" /> : null}
@@ -131,7 +118,7 @@ export default function BackEnd() {
 				<BuilderSection
 					title="Add a strength here (3 max):"
 					/* max={3} */
-					onAdd={handleAdd}
+					onAdd={() => handleAdd("strengths", { id: uuidv4(), title: "", text: "" })}
 					section={"strengths"}
 					onDelete={(id) => handleDelete(id, "strengths")}
 					state={state.strengths}
@@ -144,13 +131,29 @@ export default function BackEnd() {
 						</div>
 					)}
 				/>
+
 				<BuilderSection
-					title="Add your cv here:"
+					title="Add your skills here"
+					onAdd={() => handleAdd(["text", "id", "progress"])}
+					section={"skills"}
+					onDelete={(id) => handleDelete(id, "skills")}
+					state={state.skills}
+					render={(d) => (
+						<div>
+							<Input value={d.text || ""} placeholder="List your Skill here" />
+							<Upload id={d.id} onUpload={handleUpload} section={"skills"} image={d.image} />
+							<Input value={d.progress || ""} placeholder="rate yourself from 0 to 100%" />
+						</div>
+					)}
+				/>
+
+				<BuilderSection
+					title="Add your work here:"
 					/* max={3} */
-					onAdd={handleAdd}
-					section={"cv"}
-					onDelete={(id) => handleDelete(id, "cv")}
-					state={state.cv}
+					onAdd={() => handleAdd(["title", "timespan", "location"])}
+					section={"work"}
+					onDelete={(id) => handleDelete(id, "work")}
+					state={state.work}
 					render={(d) => (
 						<div>
 							<Input value={d.title || ""} placeholder="Your Job (e.g Frontend Developer at Microsoft)" />
@@ -169,16 +172,24 @@ export default function BackEnd() {
 				/>
 
 				<BuilderSection
-					title="Add your skills here"
-					onAdd={handleAdd}
-					section={"skills"}
-					onDelete={(id) => handleDelete(id, "cv")}
-					state={state.skills}
+					title="Add your education here:"
+					/* max={3} */
+					onAdd={() => handleAdd(["location", "timespan", "text"])}
+					section={"education"}
+					onDelete={(id) => handleDelete(id, "education")}
+					state={state.education}
 					render={(d) => (
 						<div>
-							<Input value={d.text || ""} placeholder="List your Skill here" />
-							<Upload id={d.id} onUpload={handleUpload} section={"skills"} image={d.image} />
-							<Input value={d.progress || ""} placeholder="rate yourself from 0 to 100%" />
+							<Input
+								value={d.location || ""}
+								placeholder="Location of your university or school(e.g Stanford)"
+							/>
+							<Input value={d.timespan || ""} placeholder="Timespan (e.g August 2020 - December 2023" />
+
+							<TextArea
+								value={d.text || ""}
+								placeholder="Your certification (e.g Bachelor in Computer Science)"
+							/>
 						</div>
 					)}
 				/>

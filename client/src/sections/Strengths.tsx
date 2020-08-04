@@ -17,11 +17,11 @@ export default function Strengths({ data }) {
 							<Fade cascade delay={150} duration={2100}>
 								<div className="flex flex-col items-center px-8 pb-8 md:p-0">
 									<h2 className="text-3xl">{strength.title}</h2>
-									<img
+									{/* <img
 										className="w-32 m-4"
 										src={require("../images/" + strength.image.fieldname)}
 										alt={strength.title}
-									/>
+									/> */}
 									<p className="text-center">{strength.text}</p>
 								</div>
 							</Fade>

@@ -53,8 +53,8 @@ router.post("/", [auth], async (req, res) => {
 		});
 	}
 
-	if (req.body.cv) {
-		var cv = req.body.cv.map((s) => {
+	if (req.body.work) {
+		var work = req.body.work.map((s) => {
 			const cvItem = new Cv({
 				title: s.title,
 				timespan: s.timespan,
@@ -66,8 +66,21 @@ router.post("/", [auth], async (req, res) => {
 		});
 	}
 
+	if (req.body.education) {
+		var education = req.body.education.map((s) => {
+			const cvItem = new Cv({
+				timespan: s.timespan,
+				location: s.location,
+				text: s.text,
+			});
+
+			return cvItem;
+		});
+	}
+
 	const data = new Data({
-		cv,
+		work,
+		education,
 		skills,
 		strengths,
 	});
@@ -76,6 +89,7 @@ router.post("/", [auth], async (req, res) => {
 		await data.save();
 	} catch (error) {
 		console.log(error, "error");
+		res.status(500).json("Server Error");
 	}
 	res.send(data);
 	console.log(data, "data");
