@@ -7,7 +7,7 @@ export default function HeadTitle({ title, svg }) {
 			<TextWithSvg
 				title={title}
 				svg={svg}
-				styleDiv="items-center text-center underline justify-center mt-12 md:mt-24 mb-8"
+				styleDiv="items-center text-center underline justify-center mt-12 md:mt-24 mb-12"
 				styleSvg="w-8"
 				Tag="h1"
 			/>
