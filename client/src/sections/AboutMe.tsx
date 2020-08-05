@@ -40,14 +40,15 @@ export default function AboutMe() {
 					</div>
 					<div className="flex flex-col mt-4 justify-between lg:flex-row">
 						<div className="flex items-center justify-start">
-							<div className="flex flex-col p-4 space-y-2 justify-between bg-white rounded-lg border border-minimalist-teal ">
-								<h4 className="text-minimalist-lime">Wer bin ich?</h4>
-								<h2>Ich bin Benjamin Derksen, ein ambitionierter JavaScript Entwickler</h2>
+							<div className="flex flex-col p-6 space-y-2 justify-between bg-white rounded-lg border border-minimalist-teal ">
+								<h5 className="text-minimalist-lime">Wer bin ich?</h5>
+								<h3>Ich bin Benjamin Derksen, ein ambitionierter JavaScript Entwickler</h3>
 								<p>
-									JavaScript ist meine Leidenschaft, egal ob dynamisches rendern von UI-Komponenten
-									mit React.js oder Backend Controller mit Express.js. In meiner Freizeit programmiere
-									ich entweder an einem aktuellen Projekt oder nehme Kurse für meinen Udemy Channel
-									auf.
+									Ich arbeite mit state of the art Technologien und lege viel Wert auf die
+									Skalierbarkeit meines Codes. JavaScript ist meine Leidenschaft, egal ob dynamisches
+									rendern von UI-Komponenten mit React.js oder Backend Controller mit Express.js. In
+									meiner Freizeit programmiere ich entweder an einem aktuellen Projekt oder nehme
+									Kurse für meinen Udemy Channel auf.
 								</p>
 								<div>
 									<hr className="border border-minimalist-yellow" />

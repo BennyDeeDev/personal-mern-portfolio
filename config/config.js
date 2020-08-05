@@ -10,4 +10,5 @@ module.exports = {
 	db: process.env.DB,
 	privateKEY,
 	publicKEY,
+	udemy_api_key: process.env.UDEMY_API_KEY,
 };

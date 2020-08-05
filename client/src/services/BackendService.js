@@ -24,4 +24,10 @@ export default {
 	uploadImage(payload) {
 		return apiClient.post("/user/upload", payload);
 	},
+	getUdemyCourse() {
+		return apiClient.get("/user/udemy");
+	},
+	getUdemyRatingsById(id) {
+		return apiClient.get("/user/udemy/" + id);
+	},
 };
