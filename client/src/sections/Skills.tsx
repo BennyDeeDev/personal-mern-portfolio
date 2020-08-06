@@ -18,7 +18,9 @@ import HeadTitle from "../components/HeadTitle";
 export default function Skills() {
 	return (
 		<div id="skills">
-			<HeadTitle svg={skill} title="Meine Fähigkeiten" />
+			<HeadTitle svg={skill} title="Meine Fähigkeiten">
+				<p></p>
+			</HeadTitle>
 			{/* <div className="flex flex-col justify-between md:flex-row">
 				<div className="flex-col flex-1 justify-center">
 					<div className="bg-gray-300 p-4 mt-3 rounded-lg shadow-md">

@@ -20,29 +20,29 @@ export default function Udemy() {
 	const [courses, setCourses] = useState([]);
 
 	useEffect(() => {
-		BackendService.getUdemyCourse().then(({ data }) => {
-			data.map((course) => {
-				BackendService.getUdemyRatingsById(course.id).then(({ data }) => {
-					console.log(Date.UTC(data.created));
-					setCourses([...courses, { ...course, ratings: [...data] }]);
+		BackendService.getUdemyCourse()
+			.then(({ data }) => {
+				data.map((course) => {
+					BackendService.getUdemyRatingsById(course.id)
+						.then(({ data }) => {
+							setCourses([...courses, { ...course, ratings: [...data] }]);
+						})
+						.catch((Error) => console.log(Error));
 				});
-			});
-		});
+			})
+			.catch((Error) => console.log(Error));
 	}, []);
-	console.log(courses);
 	return (
 		<div>
-			<HeadTitle svg={udemy} title="Meine Udemy Kurse" />
-			<div className="mb-4 mt-2 text-center">
+			<HeadTitle svg={udemy} title="Meine Udemy Kurse">
 				<p>Ich bringe angehenden Entwicklern das entwickeln bei!</p>
 				<a href="https://www.udemy.com/user/benjamin-derksen/">Mein Dozenten-Link</a>
-			</div>
-			<div className="flex justify-between">
+			</HeadTitle>
+
+			<div className="flex w-full justify-between">
 				{courses.map((course) => (
-					<div>
-						<div
-							className="flex flex-col bg-white p-4 rounded-lg border border-minimalist-gray"
-							style={{ width: "20rem" }}>
+					<div className="w-1/3">
+						<div className="flex flex-col  bg-white p-4 rounded-lg border border-minimalist-gray">
 							<a href={"https://udemy.com" + course.url} target="_blank">
 								<h3 className="my-2">{course.title}</h3>
 								<img

@@ -30,4 +30,7 @@ export default {
 	getUdemyRatingsById(id) {
 		return apiClient.get("/user/udemy/" + id);
 	},
+	getCodeWarsData() {
+		return apiClient.get("/user/codewars");
+	},
 };

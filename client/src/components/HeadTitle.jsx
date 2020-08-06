@@ -1,7 +1,7 @@
 import React from "react";
 import TextWithSvg from "./TextWithSvg";
 
-export default function HeadTitle({ title, svg }) {
+export default function HeadTitle({ title, svg, children }) {
 	return (
 		<div>
 			<TextWithSvg
@@ -11,6 +11,7 @@ export default function HeadTitle({ title, svg }) {
 				styleSvg="w-8"
 				Tag="h1"
 			/>
+			<div className="mb-4 mt-2 text-center">{children}</div>
 		</div>
 	);
 }

@@ -11,7 +11,9 @@ import profilepicture from "../images/profilepicture_cropped.jpg";
 export default function AboutMe() {
 	return (
 		<div id="about-me">
-			<HeadTitle svg={user} title="Über mich" />
+			<HeadTitle svg={user} title="Über mich">
+				<p></p>
+			</HeadTitle>
 			{/* <SubTitle svg={strength} title="Meine Stärken" /> */}
 			<div className="flex">
 				<img

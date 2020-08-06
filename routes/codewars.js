@@ -31,17 +31,15 @@ router.get("/", async (req, res) => {
 	/* console.dir(requestChallenges, { depth: null }); */
 	try {
 		var requestChallengesDetails = await Promise.all(
-			requestChallenges.data.data.slice(0, 5).map(async (challenge, index) => {
-				if (index < 5) {
-					try {
-						var requestChallengeDetail = await CodeWarsClient.get(`code-challenges/${challenge.id}`);
-					} catch (error) {
-						console.log(error);
-						return res.status(500).json("Server Error");
-					}
-
-					return { challenge, details: requestChallengeDetail.data };
+			requestChallenges.data.data.slice(0, 6).map(async (challenge, index) => {
+				try {
+					var requestChallengeDetail = await CodeWarsClient.get(`code-challenges/${challenge.id}`);
+				} catch (error) {
+					console.log(error);
+					return res.status(500).json("Server Error");
 				}
+
+				return { challenge, details: requestChallengeDetail.data };
 			})
 		);
 	} catch (error) {
@@ -54,27 +52,5 @@ router.get("/", async (req, res) => {
 		completed: requestChallengesDetails,
 	});
 });
-
-/* router.get("/:id", async (req, res) => {
-	console.log(req.params, res.params);
-	try {
-		var requestRatings = await CodeWarsClient.get(
-			`/taught-courses/reviews/?course=${req.params.id}&star=4,5&page_size=3`
-		);
-	} catch (error) {
-		return res.status(500).json("Server Error");
-	}
-
-	res.send(
-		requestRatings.data.results.map((result) => {
-			return {
-				content: result.content,
-				rating: result.rating,
-				created: result.created,
-				user: result.user.title,
-			};
-		})
-	);
-}); */
 
 module.exports = router;
