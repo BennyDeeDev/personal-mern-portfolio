@@ -22,7 +22,7 @@ export default function AboutMe() {
 					src={profilepicture}
 					alt=""
 				/>
-				<div className="flex flex-col ml-12">
+				<div className="flex flex-col ml-24">
 					<div className="flex justify-between">
 						{strengthsMock.map((strength, index) => (
 							<div

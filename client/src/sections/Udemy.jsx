@@ -39,10 +39,10 @@ export default function Udemy() {
 				<a href="https://www.udemy.com/user/benjamin-derksen/">Mein Dozenten-Link</a>
 			</HeadTitle>
 
-			<div className="flex w-full justify-between">
+			<div className="flex -m-4 w-full justify-between">
 				{courses.map((course) => (
 					<div className="w-1/3">
-						<div className="flex flex-col  bg-white p-4 rounded-lg border border-minimalist-gray">
+						<div className="flex flex-col m-4  bg-white p-4 rounded-lg border border-minimalist-gray">
 							<a href={"https://udemy.com" + course.url} target="_blank">
 								<h3 className="my-2">{course.title}</h3>
 								<img

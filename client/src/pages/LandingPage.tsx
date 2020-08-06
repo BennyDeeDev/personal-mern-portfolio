@@ -44,19 +44,19 @@ export default function LandingPage() {
 					</div>
 				</div>
 
-				<div className="bg-gray-100">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
-						<Projects />
-					</div>
-				</div>
-
-				<div className="bg-white-100">
+				<div className="bg-white">
 					<div className="mx-auto max-w-screen-xl px-4  py-16">
 						<CodeWars />
 					</div>
 				</div>
 
 				<div className="bg-gray-100">
+					<div className="mx-auto max-w-screen-xl px-4  py-16">
+						<Projects />
+					</div>
+				</div>
+
+				<div className="bg-white">
 					<div className="mx-auto max-w-screen-xl px-4  py-16">
 						<Cv />
 					</div>

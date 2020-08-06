@@ -6,7 +6,7 @@ export default function SkillItem({ text, svg, progress }) {
 	return (
 		<div className="flex my-4">
 			<div className="border border-minimalist-gray rounded-lg flex w-full">
-				<div className="bg-gray-300 w-24 h-6 flex items-center p-1 rounded-l-lg flex-shrink-0">
+				<div className="bg-white w-24 h-6 flex items-center p-1 rounded-l-lg flex-shrink-0">
 					<img className="w-4 h-4" src={svg} alt={text} />
 					<span className="text-xs p-2 whitespace-no-wrap">{text}</span>
 				</div>
@@ -18,7 +18,7 @@ export default function SkillItem({ text, svg, progress }) {
 					</VisibilitySensor>
 				</div>
 
-				<code className="text-xs w-12 px-4 flex items-center">{progress}</code>
+				<code className="bg-white rounded-r-lg text-xs w-12 px-4 flex items-center">{progress}</code>
 			</div>
 		</div>
 	);
