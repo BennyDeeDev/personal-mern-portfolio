@@ -11,4 +11,5 @@ module.exports = {
 	privateKEY,
 	publicKEY,
 	udemy_api_key: process.env.UDEMY_API_KEY,
+	codewars_api_key: process.env.CODEWARS_API_KEY,
 };
