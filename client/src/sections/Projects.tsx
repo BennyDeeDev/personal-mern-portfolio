@@ -3,6 +3,9 @@ import HeadTitle from "../components/HeadTitle";
 import project from "../images/project.svg";
 import TextWithSvg from "../components/TextWithSvg";
 import github from "../images/github.svg";
+import react from "../images/react.svg";
+import mongodb from "../images/mongodb.svg";
+import node from "../images/node.svg";
 
 export default function Projects() {
 	//@ts-ignore
@@ -29,6 +32,7 @@ export default function Projects() {
 								title="Source Code"></TextWithSvg>
 						</a>
 					</div>
+
 					<p>
 						Dieses Portfolio kann sehr viel mehr als man auf den ersten Blick vermuten mag, z.B wurden große
 						Teile dynamisch generiert und ich kann in meinem selbstgebauten Page-Builder ganz einfach
@@ -42,6 +46,13 @@ export default function Projects() {
 							src="http://www.youtube.com/embed/K-r9ZWRRVW4"
 							allowFullScreen={true}
 						/>
+					</div>
+					<hr />
+					<div className="flex space-x-2">
+						<h6>Stack:</h6>
+						<TextWithSvg Tag="p" styleSvg="w-3 h-3" styleDiv="" title="React.js" svg={react} />
+						<TextWithSvg Tag="p" styleSvg="w-3 h-3" styleDiv="" title="Node.js" svg={node} />
+						<TextWithSvg Tag="p" styleSvg="w-3 h-3" styleDiv="" title="Mongo DB" svg={mongodb} />
 					</div>
 				</div>
 			</div>

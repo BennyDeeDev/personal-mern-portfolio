@@ -35,7 +35,7 @@ export default function Udemy() {
 	return (
 		<div>
 			<HeadTitle svg={udemy} title="Meine Udemy Kurse">
-				<p>Ich bringe angehenden Entwicklern das entwickeln bei!</p>
+				<p>Ich bringe angehenden Entwicklern das programmieren bei!</p>
 				<a href="https://www.udemy.com/user/benjamin-derksen/">Mein Dozenten-Link</a>
 			</HeadTitle>
 

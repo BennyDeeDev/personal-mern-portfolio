@@ -34,14 +34,14 @@ export default function CodeWars() {
 				{challenges.map(({ challenge, details }, index) => (
 					<div className="flex flex-col shadow-md relative bg-gray-300 m-4 p-4 rounded-lg space-y-1">
 						<h5 className="mr-8">
-							Challenge: {challenge.name}
-							{/* <a className="ml-1" href={details.url} target="_blank" rel="noopener noreferrer">
+							Challenge:
+							<a className="ml-1" href={details.url} target="_blank" rel="noopener noreferrer">
 								{challenge.name}
-							</a> */}
+							</a>
 						</h5>
 						<h6>Absolviert am: {moment(challenge.completedAt).format("LL")}</h6>
 						<h6
-							className="absolute top-0 right-0 m-1 my-4 border p-1"
+							className="absolute top-0 right-0 rounded-full m-1 my-4 border p-1"
 							style={{ borderColor: details.rank.color }}>
 							{details.rank.name}
 						</h6>
