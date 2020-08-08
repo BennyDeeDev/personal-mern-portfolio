@@ -18,7 +18,7 @@ import HeadTitle from "../components/HeadTitle";
 export default function Skills() {
 	return (
 		<div id="skills">
-			<HeadTitle svg={skill} title="Meine Fähigkeiten">
+			<HeadTitle svg={skill} title="Fähigkeiten">
 				<p></p>
 			</HeadTitle>
 

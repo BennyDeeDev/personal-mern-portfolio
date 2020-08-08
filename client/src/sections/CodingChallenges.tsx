@@ -19,10 +19,10 @@ export default function CodeWars() {
 	}, []);
 	console.log(user, challenges);
 	return (
-		<div className="">
+		<div id="coding-challenges" className="">
 			<HeadTitle svg={codewars} title="Coding Challenges">
 				<div className="flex flex-col justify-center items-center">
-					<p>Wenn ich noch Zeit habe löse ich oft Code Challenges</p>
+					<p>Wenn ich noch Zeit habe löse ich oft Coding Challenges</p>
 					<a className="mt-1" href="https://www.codewars.com/users/Relentl3zz">
 						{/* Mein CodeWars Link: */}
 						<img src="https://www.codewars.com/users/Relentl3zz/badges/small" alt="" />

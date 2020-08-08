@@ -11,7 +11,7 @@ import SubTitle from "../components/SubTitle";
 export default function Cv() {
 	return (
 		<div id="cv">
-			<SubTitle title="Mein Lebenslauf" svg={resume} />
+			<SubTitle title="Lebenslauf" svg={resume} />
 			<div className="flex flex-col justify-between md:flex-row">
 				<CvSection title="Berufliche Laufbahn" svg={work} array={cvMock.work} />
 				<div className="mt-12 md:ml-12 md:mt-0">

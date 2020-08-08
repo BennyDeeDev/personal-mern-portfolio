@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 
 export default function Hero() {
 	return (
-		<div className="flex bg-black h-screen text-white text-xl md:text-3xl">
+		<div id="home" className="flex bg-black h-screen text-white text-xl md:text-3xl">
 			<div className="flex flex-col justify-center items-center flex-grow ">
 				<div className="relative md:w-1/2">
 					<span className="text-terminal-green font-ubuntu">user@benjaminderksen.de</span>

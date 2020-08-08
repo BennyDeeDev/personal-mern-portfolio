@@ -33,8 +33,8 @@ export default function Udemy() {
 			.catch((Error) => console.log(Error));
 	}, []);
 	return (
-		<div>
-			<HeadTitle svg={udemy} title="Meine Udemy Kurse">
+		<div id="udemy">
+			<HeadTitle svg={udemy} title="Udemy Kurse">
 				<p>Ich bringe angehenden Entwicklern das programmieren bei!</p>
 				<a href="https://www.udemy.com/user/benjamin-derksen/">Mein Dozenten-Link</a>
 			</HeadTitle>

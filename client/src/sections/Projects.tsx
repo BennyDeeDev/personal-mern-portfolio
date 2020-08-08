@@ -10,8 +10,8 @@ import node from "../images/node.svg";
 export default function Projects() {
 	//@ts-ignore
 	return (
-		<div>
-			<HeadTitle title="Meine Projekte" svg={project}>
+		<div id="projects">
+			<HeadTitle title="Projekte" svg={project}>
 				<p>
 					Da Projekte kompliziert auf zu setzen sind, habe ich Videos aufgenommen in denen ich meine einzelnen
 					Projekte vorstelle.

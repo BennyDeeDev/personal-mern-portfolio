@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Hero from "../sections/Hero";
+import Hero from "../sections/Home";
 import NavBar from "../components/NavBar";
 import AboutMe from "../sections/AboutMe";
 import Skills from "../sections/Skills";
 import Cv from "../sections/Cv";
 import Footer from "../sections/Footer";
 import BackendService from "../services/BackendService";
-import SideBar from "../components/builder/SideBar";
+import SideBar from "../components/SideBar";
 import Projects from "../sections/Projects";
 import Udemy from "../sections/Udemy";
-import CodeWars from "../sections/CodeWars";
+import CodeWars from "../sections/CodingChallenges";
 
 export default function LandingPage() {
 	/* 	const [state, setState] = useState({

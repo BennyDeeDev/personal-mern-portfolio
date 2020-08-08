@@ -10,7 +10,7 @@ import profilepicture from "../images/profilepicture_cropped.jpg";
 
 export default function AboutMe() {
 	return (
-		<div id="about-me">
+		<div id="about">
 			<HeadTitle svg={user} title="Über mich">
 				<p></p>
 			</HeadTitle>
