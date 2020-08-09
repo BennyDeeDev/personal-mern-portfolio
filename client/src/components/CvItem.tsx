@@ -2,8 +2,9 @@ import React from "react";
 import TextWithSvg from "./TextWithSvg";
 import pin from "../images/pin.svg";
 import calendar from "../images/calendar.svg";
+import Stack from "./Stack";
 
-export default function cvItem({ timespan, text, location, title }) {
+export default function cvItem({ timespan, text, location, title, stack }) {
 	return (
 		<div className="flex items-center">
 			<div className="w-4 h-1 rounded-full bg-minimalist-gray flex-shrink-0"></div>
@@ -13,6 +14,7 @@ export default function cvItem({ timespan, text, location, title }) {
 					<TextWithSvg Tag="h5" styleSvg="w-4" styleDiv="py-1" title={location} svg={pin} />
 					<TextWithSvg Tag="h6" styleSvg="w-4" styleDiv="py-1" title={timespan} svg={calendar} />
 					<p>{text}</p>
+					{stack ? <Stack stack={stack} /> : null}
 				</div>
 			</div>
 		</div>

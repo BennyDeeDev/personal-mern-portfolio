@@ -23,7 +23,7 @@ export default function Skills() {
 			</HeadTitle>
 
 			<div className="flex justify-between space-x-4">
-				<div className="flex flex-grow p-4 bg-gray-300 rounded-lg border border-minimalist-gray shadow-md">
+				<div className="flex flex-grow p-4 bg-gray-300 rounded-lg shadow-md">
 					<SkillSection array={skillsMock.frontend} svg={frontend} title="Front End Entwicklung">
 						Ich benutze HTML, CSS und JavaScript um attraktive und responsive Webseiten auf zu bauen. Meine
 						Expertise liegen in den Frontend Frameworks mit denen man skalierbare, dynamische Webseiten

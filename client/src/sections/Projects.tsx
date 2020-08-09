@@ -6,6 +6,7 @@ import github from "../images/github.svg";
 import react from "../images/react.svg";
 import mongodb from "../images/mongodb.svg";
 import node from "../images/node.svg";
+import Stack from "../components/Stack";
 
 export default function Projects() {
 	//@ts-ignore
@@ -47,13 +48,13 @@ export default function Projects() {
 							allowFullScreen={true}
 						/>
 					</div>
-					<hr />
-					<div className="flex space-x-2">
-						<h6>Stack:</h6>
-						<TextWithSvg Tag="p" styleSvg="w-3 h-3" styleDiv="" title="React.js" svg={react} />
-						<TextWithSvg Tag="p" styleSvg="w-3 h-3" styleDiv="" title="Node.js" svg={node} />
-						<TextWithSvg Tag="p" styleSvg="w-3 h-3" styleDiv="" title="Mongo DB" svg={mongodb} />
-					</div>
+
+					<Stack
+						stack={[
+							{ title: "React.js", svg: react },
+							{ title: "Node.js", svg: node },
+							{ title: "Mongo DB", svg: mongodb },
+						]}></Stack>
 				</div>
 			</div>
 		</div>
