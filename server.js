@@ -3,7 +3,6 @@ const app = express();
 /* const logger = require("./startup/logger"); */
 const { port } = require("./config/config");
 const connectDB = require("./config/db");
-const bodyParser = require("body-parser");
 
 const links = require("./routes/links");
 const user = require("./routes/user");
@@ -17,8 +16,7 @@ const contact = require("./routes/contact");
 
 /* app.use(cors()); */
 app.use(express.json());
-app.use(bodyParser.json);
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/user", user);
 app.use("/api/user/links", links);
