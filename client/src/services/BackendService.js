@@ -33,4 +33,7 @@ export default {
 	getCodeWarsData() {
 		return apiClient.get("/user/codewars");
 	},
+	postContact(payload) {
+		return apiClient.post("/contact", payload);
+	},
 };

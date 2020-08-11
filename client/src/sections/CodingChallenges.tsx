@@ -17,7 +17,7 @@ export default function CodeWars() {
 			setChallenges(data.completed);
 		});
 	}, []);
-	console.log(user, challenges);
+
 	return (
 		<div id="coding-challenges" className="">
 			<HeadTitle svg={codewars} title="Coding Challenges">

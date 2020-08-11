@@ -9,7 +9,8 @@ import BackendService from "../services/BackendService";
 import SideBar from "../components/SideBar";
 import Projects from "../sections/Projects";
 import Udemy from "../sections/Udemy";
-import CodeWars from "../sections/CodingChallenges";
+import CodingChallenges from "../sections/CodingChallenges";
+import Contact from "../sections/Contact";
 
 export default function LandingPage() {
 	/* 	const [state, setState] = useState({
@@ -46,7 +47,7 @@ export default function LandingPage() {
 
 				<div className="bg-white">
 					<div className="mx-auto max-w-screen-xl px-4  py-16">
-						<CodeWars />
+						<CodingChallenges />
 					</div>
 				</div>
 
@@ -59,6 +60,12 @@ export default function LandingPage() {
 				<div className="bg-white">
 					<div className="mx-auto max-w-screen-xl px-4  py-16">
 						<Cv />
+					</div>
+				</div>
+
+				<div className="bg-gray-100">
+					<div className="mx-auto max-w-screen-xl px-4  py-16">
+						<Contact />
 					</div>
 				</div>
 				<Footer />

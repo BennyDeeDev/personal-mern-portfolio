@@ -14,12 +14,12 @@ export default function LoginPage() {
 		BackendService.login(credentials)
 			.then(({ data }) => {
 				setLoggedIn(true);
-				console.log(data);
+
 				AuthToken.setAuthToken(data);
 			})
 			.catch((Error) => setLoginError(Error.response.data));
 	};
-	console.log(errors, loginError);
+
 	return (
 		<div className="h-screen md:min-h-screen px-4 py-8 flex items-center justify-center">
 			<div className="bg-gray-300 rounded-lg max-w-lg px-6 py-12 md:p-12 w-full shadow-md">

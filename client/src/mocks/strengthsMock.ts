@@ -2,8 +2,6 @@ import optimization from "../images/optimization.svg";
 import smartphone from "../images/smartphone.svg";
 import atom from "../images/atom.svg";
 
-console.log(atom);
-
 export default [
 	{
 		id: 1,

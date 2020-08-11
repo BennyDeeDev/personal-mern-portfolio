@@ -12,8 +12,6 @@ export default function BuilderSection({ title, onAdd, section, state, onDelete,
 		if (state.length === 0) setCollapse(false);
 	}, [state]);
 
-	console.log(state);
-
 	return (
 		<div className="mt-4">
 			<div className="bg-gray-500 rounded-lg p-4">

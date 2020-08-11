@@ -55,7 +55,6 @@ export default function BackEnd() {
 		imageForm.append("image", e.target.files[0]);
 
 		BackendService.uploadImage(imageForm).then(({ data }) => {
-			console.log(data.file);
 			let copyOfArray = [...state[section]];
 
 			let indexOfData = copyOfArray.findIndex((d) => d.id === id);
@@ -102,7 +101,7 @@ export default function BackEnd() {
 				})
 			);
 	};
-	console.log(state);
+
 	//TODO: https://stackoverflow.com/questions/27864951/how-to-access-childs-state-in-react
 	return (
 		<div className="max-w-screen-xl px-4 py-8">

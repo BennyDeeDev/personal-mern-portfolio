@@ -29,7 +29,6 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-	console.log(req.params, res.params);
 	try {
 		var requestRatings = await UdemyClient.get(
 			`/taught-courses/reviews/?course=${req.params.id}&star=4,5&page_size=3`
