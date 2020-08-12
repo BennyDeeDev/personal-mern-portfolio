@@ -30,7 +30,7 @@ export default function CodeWars() {
 				</div>
 			</HeadTitle>
 			<h3 className="mt-4 mb-2">Meine letzten Challenges:</h3>
-			<div className="grid grid-cols-3 grid-rows-2 -m-4 justify-between">
+			<div className="flex flex-col lg:grid grid-cols-3 grid-rows-2 -m-4 justify-between">
 				{challenges.map(({ challenge, details }, index) => (
 					<div className="flex flex-col shadow-md relative bg-gray-300 m-4 p-4 rounded-lg space-y-1">
 						<h5 className="mr-8">

@@ -15,18 +15,17 @@ export default function AboutMe() {
 				<p></p>
 			</HeadTitle>
 			{/* <SubTitle svg={strength} title="Meine Stärken" /> */}
-			<div className="flex">
+			<div className="flex flex-col-reverse md:flex-row">
 				<img
-					className="object-cover rounded-lg border-2 border-minimalist-gray  p-1 "
-					style={{ width: "20rem" }}
+					className="object-cover rounded-lg border-2 border-minimalist-gray my-4 lg:m-0 w-full md:w-64 p-1 "
 					src={profilepicture}
 					alt=""
 				/>
-				<div className="flex flex-col ml-24">
-					<div className="flex justify-between">
+				<div className="flex flex-col md:ml-24">
+					<div className="flex flex-col md:flex-row justify-between">
 						{strengthsMock.map((strength, index) => (
 							<div
-								className="my-2 md:m-0 bg-white p-4 w-64 rounded-lg border border-minimalist-gray"
+								className="my-2 md:m-0 bg-white p-4 md:w-64 rounded-lg border border-minimalist-gray"
 								key={index}>
 								<VisibilitySensor>
 									<Fade cascade delay={150} duration={2100}>

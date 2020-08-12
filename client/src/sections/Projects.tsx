@@ -19,7 +19,7 @@ export default function Projects() {
 				</p>
 			</HeadTitle>
 
-			<div className="grid grid-cols-3 grid-rows-1 -m-4">
+			<div className="flex flex-col lg:grid grid-cols-3 grid-rows-1 -m-4">
 				<div className="flex flex-grow m-4 p-4 rounded-lg flex-col bg-white border border-minimalist-gray space-y-2">
 					<h4>Dieses Portfolio</h4>
 
@@ -39,14 +39,8 @@ export default function Projects() {
 						Teile dynamisch generiert und ich kann in meinem selbstgebauten Page-Builder ganz einfach
 						Projekte nachreichen.
 					</p>
-					<div className="mt-2">
-						<iframe
-							id="ytplayer"
-							width="360"
-							height="205"
-							src="http://www.youtube.com/embed/K-r9ZWRRVW4"
-							allowFullScreen={true}
-						/>
+					<div className="flex w-full h-full flex-1 mt-2 overflow-hidden">
+						<iframe id="ytplayer" src="http://www.youtube.com/embed/K-r9ZWRRVW4" allowFullScreen={true} />
 					</div>
 
 					<Stack

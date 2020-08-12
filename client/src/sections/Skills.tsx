@@ -22,8 +22,8 @@ export default function Skills() {
 				<p></p>
 			</HeadTitle>
 
-			<div className="flex justify-between -m-4">
-				<div className="flex w-5/12 p-4 m-4 bg-gray-300 rounded-lg shadow-md">
+			<div className="flex flex-col md:flex-row justify-between -m-4">
+				<div className="flex lg:w-5/12 p-4 m-4 bg-gray-300 rounded-lg shadow-md">
 					<SkillSection array={skillsMock.frontend} svg={frontend} title="Front End Entwicklung">
 						<p>
 							Ich benutze HTML, CSS und JavaScript um attraktive und responsive Webseiten auf zu bauen.
@@ -33,7 +33,7 @@ export default function Skills() {
 					</SkillSection>
 				</div>
 
-				<div className="flex w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
+				<div className="flex lg:w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
 					<SkillSection array={skillsMock.backend} svg={backend} title="Back End Entwicklung">
 						<p>
 							Für meine eigenen Projekte braucht ich oft ein Backend, dieses realisiere ich mit Node.js
@@ -41,7 +41,7 @@ export default function Skills() {
 						</p>
 					</SkillSection>
 				</div>
-				<div className="flex w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
+				<div className="flex lg:w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
 					<SkillSection array={skillsMock.general} svg={internet} title="Allgemein">
 						<p>
 							Ohne Developer Tools geht es nicht mehr, pull requests mit GitLab oder multi line editing in

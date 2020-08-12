@@ -51,7 +51,7 @@ export default function SideBar() {
 		return (
 			<div className="flex justify-center items-center h-screen lg:fixed lg:top:0 lg:left-0 z-40 w-full lg:w-48 p-4 bg-gray-800  lg:border-r-4 border-minimalist-teal">
 				<div className="flex flex-col">
-					<div className="flex items-center lg:-mt-32 justify-center">
+					<div className="flex items-center -mt-32 justify-center">
 						<img
 							className="object-cover rounded-full border-4 border-minimalist-gray w-32 h-32"
 							src={profilepicture}
@@ -59,7 +59,7 @@ export default function SideBar() {
 						/>
 					</div>
 					<h5 className="text-center mt-4 text-minimalist-lime">Benjamin Derksen</h5>
-					<div className="mt-8 space-y-8 text-center text-white">
+					<div className="mt-8 space-y-4 lg:space-y-8 text-center text-white">
 						{sideBarLinks.map((link, index, array) =>
 							isBottom ? (
 								index === array.length - 1 ? (
