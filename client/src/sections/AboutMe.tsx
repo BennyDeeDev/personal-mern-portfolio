@@ -61,8 +61,8 @@ export default function AboutMe() {
 										<p>Alter: 22</p>
 									</div>
 									<div className="flex flex-col space-y-4">
-										<p>Email: b.derksen@mail.de</p>
-										<p>Ort: Waiblingen</p>
+										<p>geboren am: 18.4.1998 in Unna</p>
+										<p>Wohnort: Waiblingen</p>
 									</div>
 								</div>
 							</div>

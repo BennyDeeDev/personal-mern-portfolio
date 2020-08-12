@@ -21,7 +21,7 @@ export default function LandingPage() {
 		BackendService.fetchUserData().then(({ data }) => setState(data));
 	}, []); */
 	return (
-		<div>
+		<div className="">
 			{/* <NavBar /> */}
 			<div className="md:ml-48 ">
 				<SideBar />
