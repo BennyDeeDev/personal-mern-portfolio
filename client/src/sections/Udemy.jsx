@@ -39,45 +39,39 @@ export default function Udemy() {
 				<a href="https://www.udemy.com/user/benjamin-derksen/">Mein Dozenten-Link</a>
 			</HeadTitle>
 
-			<div className="flex -m-4 w-full justify-between">
+			<div className="flex -m-4 justify-between">
 				{courses.map((course) => (
-					<div className="w-1/3">
-						<div className="flex flex-col m-4  bg-white p-4 rounded-lg border border-minimalist-gray">
-							<a href={"https://udemy.com" + course.url} target="_blank">
-								<h3 className="my-2">{course.title}</h3>
-								<img
-									className="w-full"
-									src="https://img-a.udemycdn.com/course/240x135/3134664_8f59.jpg"
-									alt=""
-								/>
-							</a>
-							<div className=" mt-4">
-								{course.ratings.map((rating) => (
-									<div className="mt-2">
-										<h5>{rating.user}</h5>
-										<h6>{moment(rating.created).format("LL")}</h6>
-										<ReactStars
-											count={5}
-											value={rating.rating}
-											isHalf={true}
-											size={24}
-											edit={false}
-										/>
-										<ShowMoreText
-											/* Default options */
-											lines={3}
-											more="mehr"
-											less="weniger"
-											anchorClass=""
-											expanded={false}>
-											<p>{rating.content}</p>
-										</ShowMoreText>
-									</div>
-								))}
-							</div>
+					<div className="flex flex-col w-1/3 m-4  bg-white p-4 rounded-lg border border-minimalist-gray">
+						<a href={"https://udemy.com" + course.url} target="_blank">
+							<h3 className="my-2">{course.title}</h3>
+							<img
+								className="w-full"
+								src="https://img-a.udemycdn.com/course/240x135/3134664_8f59.jpg"
+								alt=""
+							/>
+						</a>
+						<div className=" mt-4">
+							{course.ratings.map((rating) => (
+								<div className="mt-2">
+									<h5>{rating.user}</h5>
+									<h6>{moment(rating.created).format("LL")}</h6>
+									<ReactStars count={5} value={rating.rating} isHalf={true} size={24} edit={false} />
+									<ShowMoreText
+										/* Default options */
+										lines={3}
+										more="mehr"
+										less="weniger"
+										anchorClass=""
+										expanded={false}>
+										<p>{rating.content}</p>
+									</ShowMoreText>
+								</div>
+							))}
 						</div>
 					</div>
 				))}
+				<div className="w-1/3 m-4 h-64"></div>
+				<div className="w-1/3 m-4 h-64"></div>
 			</div>
 		</div>
 	);

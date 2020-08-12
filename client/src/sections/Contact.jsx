@@ -10,7 +10,7 @@ export default function Contact() {
 
 	const onSubmit = (data) => {
 		BackendService.postContact(data)
-			.then(({ data }) => setSuccess("Email ist unterwegs"))
+			.then(({ data }) => setSuccess("Email ist abgeschickt"))
 			.catch(() =>
 				setError("formError", {
 					type: "manual",

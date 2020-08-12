@@ -12,10 +12,12 @@ export default function Cv() {
 	return (
 		<div id="cv">
 			<SubTitle title="Lebenslauf" svg={resume} />
-			<div className="flex flex-col justify-between md:flex-row">
-				<CvSection title="Berufliche Laufbahn" svg={work} array={cvMock.work} />
-				<div className="mt-12 md:ml-12 md:mt-0">
-					<CvSection title="Ausbildung" svg={education} array={cvMock.education} />
+			<div className="flex flex-col justify-between -m-4 md:flex-row">
+				<div className="flex w-7/12 m-4 p-4 ">
+					<CvSection section="work" title="Berufliche Laufbahn" svg={work} array={cvMock.work} />
+				</div>
+				<div className="flex w-5/12 m-4 p-4">
+					<CvSection section="education" title="Ausbildung" svg={education} array={cvMock.education} />
 				</div>
 			</div>
 		</div>

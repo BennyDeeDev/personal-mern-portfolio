@@ -63,12 +63,14 @@ export default function LandingPage() {
 					</div>
 				</div>
 
-				<div className="bg-gray-100">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
-						<Contact />
+				<div id="contact">
+					<div className="bg-gray-100">
+						<div className="mx-auto max-w-screen-xl px-4  py-16">
+							<Contact />
+						</div>
 					</div>
+					<Footer />
 				</div>
-				<Footer />
 			</div>
 		</div>
 	);

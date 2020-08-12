@@ -5,7 +5,14 @@ import next from "../images/next.svg";
 
 import Fade from "react-reveal/Fade";
 
+var Scroll = require("react-scroll");
+var scroll = Scroll.animateScroll;
+
 export default function Hero() {
+	const handleClick = () => {
+		scroll.scrollTo(1000);
+	};
+
 	return (
 		<div id="home" className="flex bg-black h-screen text-white text-xl md:text-3xl">
 			<div className="flex flex-col justify-center items-center flex-grow ">
@@ -34,7 +41,7 @@ export default function Hero() {
 						<Typewriter
 							options={{ cursor: "" }}
 							onInit={(typewriter) => {
-								typewriter.pauseFor(4000).pasteString("Server listening on Port 3000...").start();
+								typewriter.pauseFor(4000).pasteString("Server listening on Port 5000...").start();
 							}}
 						/>
 						<Typewriter
@@ -47,22 +54,20 @@ export default function Hero() {
 							<Typewriter
 								options={{ cursor: "" }}
 								onInit={(typewriter) => {
-									typewriter.pauseFor(5000).pasteString("System ready").start();
+									typewriter.pauseFor(5000).pasteString("System initialized").start();
 								}}
 							/>
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center justify-center " style={{ marginTop: "6.2rem" }}>
+				<div className="flex items-center justify-center mt-48 ">
 					<Fade delay={5500}>
-						<button className="border border-terminal-green px-8 rounded-lg">
-							<Fade delay={5700}>
-								<img
-									className="w-8 transform transition duration-300 ease-in-out rotate-90"
-									src={next}
-									alt=""
-								/>
-							</Fade>
+						<button className="border border-terminal-green px-8 rounded-lg" onClick={handleClick}>
+							<img
+								className="w-8 transform transition duration-300 ease-in-out rotate-90"
+								src={next}
+								alt=""
+							/>
 						</button>
 					</Fade>
 				</div>

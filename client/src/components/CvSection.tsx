@@ -6,7 +6,7 @@ import circle from "../images/circle.svg";
 
 import CvItem from "../components/CvItem";
 
-export default function CvSection({ title, svg, array }) {
+export default function CvSection({ title, svg, array, section }) {
 	return (
 		<div className="flex">
 			<div>
@@ -21,8 +21,9 @@ export default function CvSection({ title, svg, array }) {
 
 					<div className="flex-col ">
 						{array.map((cvItem, index) => (
-							<div key={index} className="py-1">
+							<div key={index} className="py-1 ">
 								<CvItem
+									section={section}
 									timespan={cvItem.timespan}
 									text={cvItem.text}
 									location={cvItem.location}
