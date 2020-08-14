@@ -37,8 +37,8 @@ export default function SideBar() {
 
 	const NavHamburger = () => {
 		return (
-			<div className="sticky top-0 z-50">
-				<div className="self-end">
+			<div className="sticky bg-gray-500 top-0 z-50">
+				<div className="flex justify-end">
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 				</div>
 
@@ -73,19 +73,19 @@ export default function SideBar() {
 								) : (
 									<div className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
 										<Link activeClass="" to={link.id} spy={true} smooth={true} offset={-25}>
-											<p>{link.title}</p>
+											<button className="">{link.title}</button>
 										</Link>
 									</div>
 								)
 							) : (
-								<div className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
+								<div className="transition duration-150 rounded-lg cursor-pointer text-white hover:bg-gray-700">
 									<Link
 										activeClass="opacity-100 text-minimalist-lime transition duration-150 "
 										to={link.id}
 										spy={true}
 										smooth={true}
 										offset={-25}>
-										<p>{link.title}</p>
+										<button className="">{link.title}</button>
 									</Link>
 								</div>
 							)
@@ -96,11 +96,5 @@ export default function SideBar() {
 		);
 	};
 
-	return isLarge ? (
-		<Content />
-	) : (
-		<div>
-			<NavHamburger></NavHamburger>
-		</div>
-	);
+	return isLarge ? <Content /> : <NavHamburger />;
 }

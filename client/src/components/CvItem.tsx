@@ -1,7 +1,7 @@
 import React from "react";
 import TextWithSvg from "./TextWithSvg";
-import pin from "../images/pin.svg";
 import calendar from "../images/calendar.svg";
+import pin from "../images/pin.svg";
 import Stack from "./Stack";
 
 export default function cvItem({ timespan, text, location, title, stack, section }) {

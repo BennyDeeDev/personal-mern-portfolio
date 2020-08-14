@@ -39,7 +39,7 @@ export default function NavBar() {
 	};
 
 	return (
-		<div className="w-full bg-gray-700 sticky top-0 z-50 flex flex-col justify-around items-center text-white border-b-4 border-minimalist-lime md:flex-row">
+		<div className="w-full bg-gray-700 sticky top-0 z-50 flex flex-col justify-around items-center text-white border-b-4 border-minimalist-lime lg:flex-row">
 			{!isMobile ? navBarItems() : navHamburger()}
 		</div>
 	);

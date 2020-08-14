@@ -25,7 +25,7 @@ export default function Contact() {
 				<p>Noch Fragen? Hier können Sie mich kontaktieren</p>
 			</HeadTitle>
 
-			<div className="mx-auto bg-white rounded-lg border border-minimalist-gray max-w-lg px-6 py-12 md:p-12 w-full ">
+			<div className="mx-auto bg-white rounded-lg border border-minimalist-gray max-w-lg px-6 py-12 lg:p-12 w-full ">
 				<form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 					<div className="flex ">
 						<input
@@ -89,7 +89,7 @@ export default function Contact() {
 						className={`bg-red-500 rounded-sm border border-red-600 mt-1 px-1 text-white ${
 							!errors.formError ? "hidden" : ""
 						}`}>
-						{errors.formError && "Bitte geben Sie ihre Email an"}
+						{errors.formError && "Bitte geben Sie eine Email an"}
 					</div>
 				</form>
 			</div>

@@ -22,9 +22,9 @@ export default function Skills() {
 				<p></p>
 			</HeadTitle>
 
-			<div className="flex flex-col md:flex-row justify-between -m-4">
-				<div className="flex lg:w-5/12 p-4 m-4 bg-gray-300 rounded-lg shadow-md">
-					<SkillSection array={skillsMock.frontend} svg={frontend} title="Front End Entwicklung">
+			<div className="flex flex-col xl:flex-row justify-between -m-4">
+				<div className="flex xl:w-5/12 p-4 m-4 bg-gray-300 rounded-lg shadow-md">
+					<SkillSection array={skillsMock.frontend} svg={frontend} title="Frontend Entwicklung">
 						<p>
 							Ich benutze HTML, CSS und JavaScript um attraktive und responsive Webseiten auf zu bauen.
 							Meine Expertise liegen in den Frontend Frameworks mit denen man skalierbare, dynamische
@@ -33,15 +33,15 @@ export default function Skills() {
 					</SkillSection>
 				</div>
 
-				<div className="flex lg:w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
-					<SkillSection array={skillsMock.backend} svg={backend} title="Back End Entwicklung">
+				<div className="flex xl:w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
+					<SkillSection array={skillsMock.backend} svg={backend} title="Backend Entwicklung">
 						<p>
 							Für meine eigenen Projekte braucht ich oft ein Backend, dieses realisiere ich mit Node.js
 							und Mongo DB als Datenbank.
 						</p>
 					</SkillSection>
 				</div>
-				<div className="flex lg:w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
+				<div className="flex xl:w-1/3 p-4 m-4 bg-gray-200 rounded-lg ">
 					<SkillSection array={skillsMock.general} svg={internet} title="Allgemein">
 						<p>
 							Ohne Developer Tools geht es nicht mehr, pull requests mit GitLab oder multi line editing in

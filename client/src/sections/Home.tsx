@@ -14,14 +14,14 @@ export default function Hero() {
 	};
 
 	return (
-		<div id="home" className="flex bg-black h-screen text-white text-xl md:text-3xl">
+		<div id="home" className="flex bg-black h-screen text-white text-xl lg:text-3xl">
 			<div className="flex flex-col justify-center items-center flex-grow ">
-				<div className="relative md:w-1/2">
+				<div className="relative xl:w-1/2">
 					<span className="text-terminal-green font-ubuntu">user@benjaminderksen.de</span>
 					<span className="">
 						:<span className="text-blue-500">~</span>$
 					</span>
-					<div className="inline ml-1 lg:absolute">
+					<div className="inline ml-1 xl:absolute">
 						<Typewriter
 							options={{
 								cursor: "_",

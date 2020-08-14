@@ -15,17 +15,17 @@ export default function AboutMe() {
 				<p></p>
 			</HeadTitle>
 			{/* <SubTitle svg={strength} title="Meine Stärken" /> */}
-			<div className="flex flex-col-reverse md:flex-row">
+			<div className="flex flex-col-reverse lg:flex-row">
 				<img
-					className="object-cover rounded-lg border-2 border-minimalist-gray my-4 lg:m-0 w-full md:w-64 p-1 "
+					className="object-cover md:hidden my-4 rounded-lg border-2 border-minimalist-gray mr-4 w-full md:w-64 p-1 "
 					src={profilepicture}
 					alt=""
 				/>
-				<div className="flex flex-col md:ml-24">
-					<div className="flex flex-col md:flex-row justify-between">
+				<div className="flex flex-col xl:ml-16">
+					<div className="flex -m-2 flex-col md:flex-row justify-between">
 						{strengthsMock.map((strength, index) => (
 							<div
-								className="my-2 md:m-0 bg-white p-4 md:w-64 rounded-lg border border-minimalist-gray"
+								className="m-2 bg-white p-4 lg:w-64 rounded-lg border border-minimalist-gray"
 								key={index}>
 								<VisibilitySensor>
 									<Fade cascade delay={150} duration={2100}>
@@ -40,29 +40,37 @@ export default function AboutMe() {
 						))}
 					</div>
 					<div className="flex flex-col mt-4 justify-between lg:flex-row">
-						<div className="flex items-center justify-start">
-							<div className="flex flex-col p-6 space-y-2 justify-between bg-white rounded-lg border border-minimalist-teal ">
-								<h5 className="text-minimalist-lime">Wer bin ich?</h5>
-								<h3>Ich bin Benjamin Derksen, ein ambitionierter JavaScript Entwickler</h3>
-								<p>
-									Ich arbeite mit state of the art Technologien und lege viel Wert auf die
-									Skalierbarkeit meines Codes. JavaScript ist meine Leidenschaft, egal ob dynamisches
-									rendern von UI-Komponenten mit React.js oder Backend Controller mit Express.js. In
-									meiner Freizeit programmiere ich entweder an einem aktuellen Projekt oder nehme
-									Kurse für meinen Udemy Channel auf.
-								</p>
-								<div>
-									<hr className="border border-minimalist-yellow" />
+						<div className="flex flex-col p-6 space-y-2 justify-between bg-white rounded-lg border border-minimalist-teal ">
+							<div className="flex">
+								<img
+									className="object-cover rounded-lg border-2 border-minimalist-gray mr-4 w-48 p-1 hidden md:block"
+									src={profilepicture}
+									alt=""
+								/>
+								<div className="flex-col space--1">
+									<h5 className="text-minimalist-lime">Wer bin ich?</h5>
+									<h3>Ich bin Benjamin Derksen, ein ambitionierter JavaScript Entwickler</h3>
+									<p>
+										Ich arbeite mit state of the art Technologien und lege viel Wert auf die
+										Skalierbarkeit meines Codes. JavaScript ist meine Leidenschaft, egal ob
+										dynamisches rendern von UI-Komponenten mit React.js oder Backend Controller mit
+										Express.js. In meiner Freizeit programmiere ich entweder an einem aktuellen
+										Projekt oder nehme Kurse für meinen Udemy Channel auf.
+									</p>
 								</div>
-								<div className="flex justify-between">
-									<div className="flex flex-col space-y-4">
-										<p>Name: Benjamin Derksen</p>
-										<p>Alter: 22</p>
-									</div>
-									<div className="flex flex-col space-y-4">
-										<p>geboren am: 18.4.1998 in Unna</p>
-										<p>Wohnort: Waiblingen</p>
-									</div>
+							</div>
+
+							<div>
+								<hr className="border border-minimalist-yellow" />
+							</div>
+							<div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
+								<div className="flex flex-col md:space-y-4">
+									<p>Name: Benjamin Derksen</p>
+									<p>Alter: 22</p>
+								</div>
+								<div className="flex flex-col md:space-y-4">
+									<p>geboren am: 18.4.1998 in Unna</p>
+									<p>Wohnort: Waiblingen</p>
 								</div>
 							</div>
 						</div>

@@ -7,6 +7,10 @@ import ShowMoreText from "react-show-more-text";
 import moment from "moment";
 import "moment/locale/de";
 
+import TextWithSvg from "../components/TextWithSvg";
+import calendar from "../images/calendar.svg";
+import mission from "../images/mission.svg";
+
 export default function CodeWars() {
 	const [user, setUser] = useState({});
 	const [challenges, setChallenges] = useState([]);
@@ -32,19 +36,34 @@ export default function CodeWars() {
 			<h3 className="mt-4 mb-2">Meine letzten Challenges:</h3>
 			<div className="flex flex-col lg:grid grid-cols-3 grid-rows-2 -m-4 justify-between">
 				{challenges.map(({ challenge, details }, index) => (
-					<div className="flex flex-col shadow-md relative bg-gray-300 m-4 p-4 rounded-lg space-y-1">
-						<h5 className="mr-8">
-							Challenge:
-							<a className="ml-1" href={details.url} target="_blank" rel="noopener noreferrer">
-								{challenge.name}
-							</a>
-						</h5>
-						<h6>Absolviert am: {moment(challenge.completedAt).format("LL")}</h6>
-						<h6
-							className="absolute top-0 right-0 rounded-full m-1 my-4 border p-1"
-							style={{ borderColor: details.rank.color }}>
-							{details.rank.name}
-						</h6>
+					<a
+						className="flex flex-col justify-between shadow-md relative bg-gray-300 m-4 p-4 rounded-lg space-y-1"
+						href={details.url}
+						target="_blank"
+						rel="noopener noreferrer">
+						<div className="flex flex-grow flex-col justify-between ">
+							<TextWithSvg
+								Tag="h5"
+								styleSvg="w-5"
+								styleDiv="py-1 mr-12 "
+								title={challenge.name}
+								svg={mission}
+							/>
+
+							<TextWithSvg
+								Tag="h6"
+								styleSvg="w-4"
+								styleDiv="py-1"
+								title={moment(challenge.completedAt).format("LL")}
+								svg={calendar}
+							/>
+
+							<h6
+								className="absolute top-0 right-0 rounded-full m-1 my-4 border p-1"
+								style={{ borderColor: details.rank.color }}>
+								{details.rank.name}
+							</h6>
+						</div>
 						<ShowMoreText
 							/* Default options */
 							lines={6}
@@ -54,17 +73,20 @@ export default function CodeWars() {
 							expanded={false}>
 							<p>{details.description}</p>
 						</ShowMoreText>
-						<div className="flex justify-between my-1">
-							<div className="flex">
-								<h6>Versuche: </h6>
-								<code className="ml-1 text-orange-500">{details.totalAttempts}</code>
-							</div>
-							<div className="flex">
-								<h6>Lösungen: </h6>
-								<code className="ml-1 text-green-500">{details.totalCompleted}</code>
+						<div className=" mt-auto">
+							<hr className="my-2 border border-minimalist-yellow" />
+							<div className="flex align-bottom justify-between my-1">
+								<div className="flex flex-col xl:flex-row">
+									<h6>Versuche: </h6>
+									<code className="ml-1 text-orange-500">{details.totalAttempts}</code>
+								</div>
+								<div className="flex flex-col xl:flex-row">
+									<h6>Lösungen: </h6>
+									<code className="ml-1 text-green-500">{details.totalCompleted}</code>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				))}
 			</div>
 		</div>

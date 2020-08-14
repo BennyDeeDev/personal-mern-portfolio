@@ -21,8 +21,8 @@ export default function LoginPage() {
 	};
 
 	return (
-		<div className="h-screen md:min-h-screen px-4 py-8 flex items-center justify-center">
-			<div className="bg-gray-300 rounded-lg max-w-lg px-6 py-12 md:p-12 w-full shadow-md">
+		<div className="h-screen lg:min-h-screen px-4 py-8 flex items-center justify-center">
+			<div className="bg-gray-300 rounded-lg max-w-lg px-6 py-12 lg:p-12 w-full shadow-md">
 				<h1>Backend Login</h1>
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className="mt-4">

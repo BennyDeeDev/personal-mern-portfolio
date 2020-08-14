@@ -23,49 +23,49 @@ export default function LandingPage() {
 	return (
 		<div className="">
 			{/* <NavBar /> */}
-			<div className="md:ml-48 ">
+			<div className="lg:ml-48">
 				<SideBar />
 
 				<Hero />
 
 				<div className="bg-gray-100">
-					<div className="mx-auto max-w-screen-xl px-4 py-8 pb-16">
+					<div className="container centered-container">
 						<AboutMe /* data={state.strengths} */ />
 					</div>
 				</div>
 				<div className="bg-white">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
+					<div className="container centered-container">
 						<Skills />
 					</div>
 				</div>
 
 				<div className="bg-gray-100">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
+					<div className="container centered-container">
 						<Udemy />
 					</div>
 				</div>
 
 				<div className="bg-white">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
+					<div className="container centered-container">
 						<CodingChallenges />
 					</div>
 				</div>
 
 				<div className="bg-gray-100">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
+					<div className="container centered-container">
 						<Projects />
 					</div>
 				</div>
 
 				<div className="bg-white">
-					<div className="mx-auto max-w-screen-xl px-4  py-16">
+					<div className="container centered-container">
 						<Cv />
 					</div>
 				</div>
 
 				<div id="contact">
 					<div className="bg-gray-100">
-						<div className="mx-auto max-w-screen-xl px-4  py-16">
+						<div className="container centered-container">
 							<Contact />
 						</div>
 					</div>
