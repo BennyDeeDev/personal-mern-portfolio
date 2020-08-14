@@ -15,13 +15,13 @@ export default function AboutMe() {
 				<p></p>
 			</HeadTitle>
 			{/* <SubTitle svg={strength} title="Meine Stärken" /> */}
-			<div className="flex flex-col-reverse lg:flex-row">
-				<img
+			<div className="flex flex-col-reverse justify-center lg:flex-row">
+				{/* <img
 					className="object-cover md:hidden my-4 rounded-lg border-2 border-minimalist-gray mr-4 w-full md:w-64 p-1 "
 					src={profilepicture}
 					alt=""
-				/>
-				<div className="flex flex-col xl:ml-16">
+				/> */}
+				<div className="flex flex-col ">
 					<div className="flex -m-2 flex-col md:flex-row justify-between">
 						{strengthsMock.map((strength, index) => (
 							<div
@@ -41,13 +41,13 @@ export default function AboutMe() {
 					</div>
 					<div className="flex flex-col mt-4 justify-between lg:flex-row">
 						<div className="flex flex-col p-6 space-y-2 justify-between bg-white rounded-lg border border-minimalist-teal ">
-							<div className="flex">
+							<div className="flex flex-col-reverse md:flex-row">
 								<img
-									className="object-cover rounded-lg border-2 border-minimalist-gray mr-4 w-48 p-1 hidden md:block"
+									className="object-cover rounded-lg border-2 border-minimalist-gray my-2 md:mr-4 w-48 p-1 "
 									src={profilepicture}
 									alt=""
 								/>
-								<div className="flex-col space--1">
+								<div className="flex-col max-w-xl space-y-1">
 									<h5 className="text-minimalist-lime">Wer bin ich?</h5>
 									<h3>Ich bin Benjamin Derksen, ein ambitionierter JavaScript Entwickler</h3>
 									<p>
