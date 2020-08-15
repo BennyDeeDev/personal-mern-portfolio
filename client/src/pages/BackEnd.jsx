@@ -10,8 +10,6 @@ import BackendService, { api } from "../services/BackendService";
 
 import { toast } from "react-toastify";
 
-import { get, isEmpty } from "lodash";
-
 import "react-toastify/dist/ReactToastify.css";
 import { Redirect } from "react-router-dom";
 

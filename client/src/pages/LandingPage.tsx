@@ -12,6 +12,10 @@ import Udemy from "../sections/Udemy";
 import CodingChallenges from "../sections/CodingChallenges";
 import Contact from "../sections/Contact";
 
+import { api } from "../services/BackendService";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function LandingPage() {
 	/* 	const [state, setState] = useState({
 		AboutMe: [],
@@ -20,6 +24,24 @@ export default function LandingPage() {
 	useEffect(() => {
 		BackendService.fetchUserData().then(({ data }) => setState(data));
 	}, []); */
+
+	api.interceptors.response.use(
+		(res) => res,
+		(err) => {
+			toast.error("Beim laden der Daten ist etwas schiefgelaufen, bitte kommen Sie später wieder", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
+
+			return Promise.reject(err);
+		}
+	);
+
 	return (
 		<div className="">
 			{/* <NavBar /> */}

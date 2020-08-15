@@ -18,8 +18,7 @@ export default function CodeWars() {
 
 	useEffect(() => {
 		BackendService.getCodeWarsData().then(({ data }) => {
-			setUser(data.user);
-			setChallenges(data.completed);
+			setChallenges(data.challenges);
 		});
 	}, []);
 

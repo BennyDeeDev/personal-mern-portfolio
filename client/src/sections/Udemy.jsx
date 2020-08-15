@@ -8,29 +8,19 @@ import ShowMoreText from "react-show-more-text";
 import moment from "moment";
 import "moment/locale/de";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Udemy() {
-	/* 	const pseudoCourses = [
-		{
-			title: "mern stack",
-			url: "",
-		},
-		{ title: "electron course", url: "" },
-		{ title: "react course", url: "" },
-	]; */
 	const [courses, setCourses] = useState([]);
 
 	useEffect(() => {
-		BackendService.getUdemyCourse()
+		BackendService.getUdemyData()
 			.then(({ data }) => {
-				data.map((course) => {
-					BackendService.getUdemyRatingsById(course.id)
-						.then(({ data }) => {
-							setCourses([...courses, { ...course, ratings: [...data] }]);
-						})
-						.catch((Error) => console.log(Error));
-				});
+				console.log(data);
+				setCourses(data.courses);
 			})
-			.catch((Error) => console.log(Error));
+			.catch((Error) => {});
 	}, []);
 	return (
 		<div id="udemy">
@@ -42,7 +32,7 @@ export default function Udemy() {
 			</HeadTitle>
 
 			<div className="flex flex-col lg:flex-row -m-4 justify-between">
-				{courses.map((course) => (
+				{courses.map(({ course, ratings }) => (
 					<a
 						className="flex flex-col  lg:w-1/3 m-4  bg-white p-4 rounded-lg border border-minimalist-gray"
 						href={"https://udemy.com" + course.url}
@@ -53,11 +43,11 @@ export default function Udemy() {
 							src="https://img-a.udemycdn.com/course/240x135/3134664_8f59.jpg"
 							alt=""
 						/>
-
+						{console.log(course)}
 						<div className=" mt-4">
-							{course.ratings.map((rating) => (
+							{ratings.results.map((rating) => (
 								<div className="mt-2">
-									<h5>{rating.user}</h5>
+									<h5>{rating.user.title}</h5>
 									<h6>{moment(rating.created).format("LL")}</h6>
 									<ReactStars count={5} value={rating.rating} isHalf={true} size={24} edit={false} />
 									<ShowMoreText lines={3} more="mehr" less="weniger" anchorClass="" expanded={false}>
