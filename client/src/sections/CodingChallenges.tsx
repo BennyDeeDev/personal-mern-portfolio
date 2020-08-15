@@ -10,6 +10,7 @@ import "moment/locale/de";
 import TextWithSvg from "../components/TextWithSvg";
 import calendar from "../images/calendar.svg";
 import mission from "../images/mission.svg";
+import Hr from "../components/Hr";
 
 export default function CodeWars() {
 	const [user, setUser] = useState({});
@@ -74,7 +75,7 @@ export default function CodeWars() {
 							<p>{details.description}</p>
 						</ShowMoreText>
 						<div className=" mt-auto">
-							<hr className="my-2 border border-minimalist-yellow" />
+							<Hr />
 							<div className="flex align-bottom justify-between my-1">
 								<div className="flex flex-col xl:flex-row">
 									<h6>Versuche: </h6>

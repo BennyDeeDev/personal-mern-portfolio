@@ -73,7 +73,7 @@ export default function SideBar() {
 								) : (
 									<div className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
 										<Link activeClass="" to={link.id} spy={true} smooth={true} offset={-25}>
-											<button className="">{link.title}</button>
+											{link.title}
 										</Link>
 									</div>
 								)
@@ -85,7 +85,7 @@ export default function SideBar() {
 										spy={true}
 										smooth={true}
 										offset={-25}>
-										<button className="">{link.title}</button>
+										{link.title}
 									</Link>
 								</div>
 							)

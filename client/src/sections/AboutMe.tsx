@@ -7,6 +7,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import HeadTitle from "../components/HeadTitle";
 import user from "../images/user.svg";
 import profilepicture from "../images/profilepicture_cropped.jpg";
+import Hr from "../components/Hr";
 
 export default function AboutMe() {
 	return (
@@ -40,14 +41,14 @@ export default function AboutMe() {
 						))}
 					</div>
 					<div className="flex flex-col mt-4 justify-between lg:flex-row">
-						<div className="flex flex-col p-6 space-y-2 justify-between bg-white rounded-lg border border-minimalist-teal ">
+						<div className="flex flex-col p-6  justify-between bg-white rounded-lg border border-minimalist-teal ">
 							<div className="flex flex-col-reverse md:flex-row">
 								<img
-									className="object-cover rounded-lg border-2 border-minimalist-gray my-2 md:mr-4 w-48 p-1 "
+									className="object-cover rounded-lg border-2 border-minimalist-gray my-2 md:my-0 md:mr-4 w-48 p-1 "
 									src={profilepicture}
 									alt=""
 								/>
-								<div className="flex-col max-w-xl space-y-1">
+								<div className="flex flex-col justify-center  max-w-xl space-y-4">
 									<h5 className="text-minimalist-lime">Wer bin ich?</h5>
 									<h3>Ich bin Benjamin Derksen, ein ambitionierter JavaScript Entwickler</h3>
 									<p>
@@ -60,9 +61,7 @@ export default function AboutMe() {
 								</div>
 							</div>
 
-							<div>
-								<hr className="border border-minimalist-yellow" />
-							</div>
+							<Hr />
 							<div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
 								<div className="flex flex-col md:space-y-4">
 									<p>Name: Benjamin Derksen</p>
