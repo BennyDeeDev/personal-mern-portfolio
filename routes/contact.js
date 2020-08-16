@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const { check, body, validationResult, custom } = require("express-validator");
+
 const { gmail_email, gmail_password } = require("../config/config");
 
 router.post("/", (req, res) => {
@@ -22,7 +22,6 @@ router.post("/", (req, res) => {
 		text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`,
 	};
 
-	// Attempt to send the email
 	smtpTrans.sendMail(mailOpts, (error, response) => {
 		if (error) {
 			console.log(error);

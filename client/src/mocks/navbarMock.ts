@@ -1,5 +1,10 @@
 export default [
-	{ id: "strengths", text: "Meine Stärken" },
-	{ id: "skills", text: "Meine Fähigkeiten" },
-	{ id: "cv", text: "Mein Lebenslauf" }
+	{ title: "Home", id: "home" },
+	{ title: "Über mich", id: "about" },
+	{ title: "Fähigkeiten", id: "skills" },
+	{ title: "Udemy Kurse", id: "udemy" },
+	{ title: "Coding Challenges", id: "coding-challenges" },
+	{ title: "Projekte", id: "projects" },
+	{ title: "Lebenslauf", id: "cv" },
+	{ title: "Kontakt", id: "contact" },
 ];

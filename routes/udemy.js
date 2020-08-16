@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { check, body, validationResult, custom } = require("express-validator");
+
 const { Udemy } = require("../models/udemy.model");
 
 router.get("/", async (req, res) => {

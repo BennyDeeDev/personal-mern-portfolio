@@ -21,8 +21,8 @@ export default {
 	],
 	backend: [
 		{ id: 1, svg: linux, text: "Linux", progress: "60%" },
-		{ id: 2, svg: node, text: "Node.js", progress: "20%" },
-		{ id: 3, svg: mongodb, text: "Mongo DB", progress: "5%" },
+		{ id: 2, svg: node, text: "Node.js", progress: "60%" },
+		{ id: 3, svg: mongodb, text: "Mongo DB", progress: "40%" },
 	],
 	general: [
 		{ id: 6, svg: typescript, text: "TypeScript", progress: "60%" },

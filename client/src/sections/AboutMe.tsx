@@ -1,7 +1,6 @@
 import React from "react";
 import strengthsMock from "../mocks/strengthsMock";
-import strength from "../images/strength.svg";
-import SubTitle from "../components/SubTitle";
+
 import Fade from "react-reveal/Fade";
 import VisibilitySensor from "react-visibility-sensor";
 import HeadTitle from "../components/HeadTitle";
@@ -15,13 +14,8 @@ export default function AboutMe() {
 			<HeadTitle svg={user} title="Über mich">
 				<p></p>
 			</HeadTitle>
-			{/* <SubTitle svg={strength} title="Meine Stärken" /> */}
+
 			<div className="flex flex-col-reverse justify-center lg:flex-row">
-				{/* <img
-					className="object-cover md:hidden my-4 rounded-lg border-2 border-minimalist-gray mr-4 w-full md:w-64 p-1 "
-					src={profilepicture}
-					alt=""
-				/> */}
 				<div className="flex flex-col ">
 					<div className="flex -m-2 flex-col md:flex-row justify-between">
 						{strengthsMock.map((strength, index) => (

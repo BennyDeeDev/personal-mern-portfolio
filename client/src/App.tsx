@@ -1,9 +1,7 @@
 import React from "react";
 import LandingPage from "./pages/LandingPage";
-import LoginPage from "./pages/LoginPage";
-import NotFound from "./pages/NotFound";
-import { Switch, Route } from "react-router-dom";
-import BackEnd from "./pages/BackEnd";
+
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
 	return (
@@ -12,14 +10,9 @@ function App() {
 				<Route exact path="/">
 					<LandingPage />
 				</Route>
-				<Route exact path="/login">
-					<LoginPage />
-				</Route>
-				<Route exact path="/backend">
-					<BackEnd />
-				</Route>
+
 				<Route path="*">
-					<NotFound />
+					<Redirect to="/" />
 				</Route>
 			</Switch>
 		</div>

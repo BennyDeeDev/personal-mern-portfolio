@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Hero from "../sections/Home";
-import NavBar from "../components/NavBar";
+
 import AboutMe from "../sections/AboutMe";
 import Skills from "../sections/Skills";
 import Cv from "../sections/Cv";
 import Footer from "../sections/Footer";
-import BackendService from "../services/BackendService";
-import SideBar from "../components/SideBar";
+
+import NavBar from "../components/NavBar";
 import Projects from "../sections/Projects";
 import Udemy from "../sections/Udemy";
 import CodingChallenges from "../sections/CodingChallenges";
@@ -17,14 +17,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function LandingPage() {
-	/* 	const [state, setState] = useState({
-		AboutMe: [],
-	});
-
-	useEffect(() => {
-		BackendService.fetchUserData().then(({ data }) => setState(data));
-	}, []); */
-
 	api.interceptors.response.use(
 		(res) => res,
 		(err) => {
@@ -44,15 +36,14 @@ export default function LandingPage() {
 
 	return (
 		<div className="">
-			{/* <NavBar /> */}
 			<div className="lg:ml-48">
-				<SideBar />
+				<NavBar />
 
 				<Hero />
 
 				<div className="bg-gray-100">
 					<div className="container centered-container">
-						<AboutMe /* data={state.strengths} */ />
+						<AboutMe />
 					</div>
 				</div>
 				<div className="bg-white">
