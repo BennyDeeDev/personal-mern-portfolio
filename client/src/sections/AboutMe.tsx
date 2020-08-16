@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import VisibilitySensor from "react-visibility-sensor";
 import HeadTitle from "../components/HeadTitle";
 import user from "../images/user.svg";
-import profilepicture from "../images/profilepicture_cropped.jpg";
+import profilepicture from "../images/profilepicture-small.jpg";
 import Hr from "../components/Hr";
 
 export default function AboutMe() {

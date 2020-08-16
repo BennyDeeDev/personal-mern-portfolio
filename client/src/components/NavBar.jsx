@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import profilepicture from "../images/profilepicture.jpg";
+import profilepicture from "../images/profilepicture-small.jpg";
 import navBarMock from "../mocks/navbarMock";
 
 import { Link } from "react-scroll";
