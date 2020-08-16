@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import profilepicture from "../images/profilepicture.jpg";
+import navBarMock from "../mocks/navbarMock";
 
 import { Link } from "react-scroll";
 
@@ -19,17 +20,6 @@ export default function SideBar() {
 			setIsBottom(false);
 		}
 	});
-
-	const sideBarLinks = [
-		{ title: "Home", id: "home" },
-		{ title: "Über mich", id: "about" },
-		{ title: "Fähigkeiten", id: "skills" },
-		{ title: "Udemy Kurse", id: "udemy" },
-		{ title: "Coding Challenges", id: "coding-challenges" },
-		{ title: "Projekte", id: "projects" },
-		{ title: "Lebenslauf", id: "cv" },
-		{ title: "Kontakt", id: "contact" },
-	];
 
 	const isLarge = useMediaQuery({ query: "(min-device-width: 1024px)" });
 
@@ -60,10 +50,12 @@ export default function SideBar() {
 					</div>
 					<h5 className="text-center mt-4 text-minimalist-lime">Benjamin Derksen</h5>
 					<div className="mt-8 space-y-4 lg:space-y-8 text-center text-white">
-						{sideBarLinks.map((link, index, array) =>
+						{navBarMock.map((link, index, array) =>
 							isBottom ? (
 								index === array.length - 1 ? (
-									<div className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
+									<div
+										key={index}
+										className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
 										<Link activeClass="" to={link.id} spy={true} smooth={true} offset={-25}>
 											<p className="opacity-100 text-minimalist-lime transition duration-150 ">
 												{link.title}
@@ -71,14 +63,18 @@ export default function SideBar() {
 										</Link>
 									</div>
 								) : (
-									<div className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
+									<div
+										key={index}
+										className="transition duration-150 rounded-lg cursor-pointer hover:bg-gray-700">
 										<Link activeClass="" to={link.id} spy={true} smooth={true} offset={-25}>
 											{link.title}
 										</Link>
 									</div>
 								)
 							) : (
-								<div className="transition duration-150 rounded-lg cursor-pointer text-white hover:bg-gray-700">
+								<div
+									key={index}
+									className="transition duration-150 rounded-lg cursor-pointer text-white hover:bg-gray-700">
 									<Link
 										activeClass="opacity-100 text-minimalist-lime transition duration-150 "
 										to={link.id}

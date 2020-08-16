@@ -50,7 +50,11 @@ Dieses Projekt ist mein Portfolio welches mit dem folgenden Stack aufgebaut word
   <li>React mit create-react-app</li>
   <li>TypeScript für TypeChecking, mit strict auf false, types folgen bald</li>
   <li>Tailwind CSS mit Sass</li>
+  <li>Node.js für das Backend welches Daten von der Udemy-Instructor- und CodeWars API holt, um diese dynamisch auf der landing page anzuzeigen</li>
+  <li>Mongo DB um die abgeholten Daten zu speichern um nicht abhängig von externen APIs zu sein</li>
 </ul>
 
-Deployed und gehostet wird mit netlify aus dem Master-branch:
-https://benjaminderksen.netlify.app/ </br>
+Deployed und gehostet wird mit heroku aus dem Master-branch:
+https://benjaminderksen.heroku.com/ </br>
+
+Die Datenbank ist in MongoDB Atlas gespeichert

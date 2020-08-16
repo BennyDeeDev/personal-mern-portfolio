@@ -2,12 +2,7 @@ import React from "react";
 import skillsMock from "../mocks/skillsMock";
 
 import skill from "../images/skills.svg";
-import TextWithSvg from "../components/TextWithSvg";
 
-import SubTitle from "../components/SubTitle";
-import linksMock from "../mocks/linksMock";
-
-import info from "../images/info.svg";
 import SkillSection from "../components/SkillSection";
 
 import frontend from "../images/frontend.svg";

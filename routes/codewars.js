@@ -1,8 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { check, body, validationResult, custom } = require("express-validator");
-const { codewars_api_key } = require("../config/config");
-const axios = require("axios");
 
 const { CodeWars } = require("../models/codewars.model");
 

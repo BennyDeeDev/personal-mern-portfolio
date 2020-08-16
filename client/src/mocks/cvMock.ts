@@ -5,6 +5,7 @@ import css3 from "../images/css3.svg";
 import react from "../images/react.svg";
 import redux from "../images/redux.svg";
 import typescript from "../images/typescript.svg";
+import tailwindcss from "../images/tailwindcss.svg";
 
 export default {
 	work: [
@@ -19,6 +20,7 @@ export default {
 				{ title: "Vue.js", svg: vue },
 				{ title: "HTML5", svg: html5 },
 				{ title: "CSS3", svg: css3 },
+				{ title: "Tailwind CSS", svg: tailwindcss },
 			],
 		},
 		{

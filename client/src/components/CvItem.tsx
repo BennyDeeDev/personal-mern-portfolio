@@ -5,7 +5,6 @@ import pin from "../images/pin.svg";
 import Stack from "./Stack";
 
 export default function cvItem({ timespan, text, location, title, stack, section }) {
-	console.log(section);
 	return (
 		<div className="flex items-center">
 			<div className="w-4 h-1 rounded-full bg-minimalist-gray flex-shrink-0"></div>

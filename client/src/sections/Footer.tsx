@@ -1,6 +1,4 @@
 import React from "react";
-import mail from "../images/mail.svg";
-import TextWithSvg from "../components/TextWithSvg";
 
 export default function Footer() {
 	return (

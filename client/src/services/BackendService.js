@@ -12,18 +12,6 @@ const apiClient = axios.create({
 export const api = apiClient;
 
 export default {
-	login(credentials) {
-		return apiClient.post("/user/auth", credentials);
-	},
-	fetchUserData() {
-		return apiClient.get("/user/data");
-	},
-	saveUserData(payload) {
-		return apiClient.post("/user/data", payload);
-	},
-	uploadImage(payload) {
-		return apiClient.post("/user/upload", payload);
-	},
 	getUdemyData() {
 		return apiClient.get("/user/udemy");
 	},
