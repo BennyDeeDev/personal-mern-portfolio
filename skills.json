@@ -1,0 +1,47 @@
+{
+  "skills": [{
+      "text": "HTML",
+      "progress": "90%"
+    },
+    {
+      "text": "CSS",
+      "progress": "80%"
+    },
+    {
+      "text": "JavaScript",
+      "progress": "85%"
+    },
+    {
+      "text": "React",
+      "progress": "80%"
+    },
+    {
+      "text": "Vue",
+      "progress": "90%"
+    },
+    {
+      "text": "Linux",
+      "progress": "60%"
+    },
+    {
+      "text": "Node.js",
+      "progress": "20%"
+    },
+    {
+      "text": "Mongo DB",
+      "progress": "5%"
+    },
+    {
+      "text": "TypeScript",
+      "progress": "60%"
+    },
+    {
+      "text": "Git",
+      "progress": "60%"
+    },
+    {
+      "text": "VSCode",
+      "progress": "80%"
+    }
+  ]
+}

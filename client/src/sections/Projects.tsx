@@ -1,0 +1,56 @@
+import React from "react";
+import HeadTitle from "../components/HeadTitle";
+import project from "../images/project.svg";
+import TextWithSvg from "../components/TextWithSvg";
+import github from "../images/github.svg";
+import react from "../images/react.svg";
+import mongodb from "../images/mongodb.svg";
+import node from "../images/node.svg";
+import Stack from "../components/Stack";
+
+export default function Projects() {
+	//@ts-ignore
+	return (
+		<div id="projects">
+			<HeadTitle title="Projekte" svg={project}>
+				<p>
+					Da Projekte kompliziert auf zu setzen sind, habe ich Videos aufgenommen in denen ich meine einzelnen
+					Projekte vorstelle.
+				</p>
+			</HeadTitle>
+
+			<div className="flex flex-col lg:grid grid-cols-3 grid-rows-1 -m-4">
+				<div className="flex flex-grow m-4 p-4 rounded-lg flex-col bg-white border border-minimalist-gray space-y-2">
+					<h4>Dieses Portfolio</h4>
+
+					<div>
+						<a href="">
+							<TextWithSvg
+								Tag="h6"
+								svg={github}
+								styleSvg="w-4"
+								styleDiv=""
+								title="Source Code"></TextWithSvg>
+						</a>
+					</div>
+
+					<p>
+						Dieses Portfolio kann sehr viel mehr als man auf den ersten Blick vermuten mag, z.B wurden große
+						Teile dynamisch generiert und ich kann in meinem selbstgebauten Page-Builder ganz einfach
+						Projekte nachreichen.
+					</p>
+					<div className="flex w-full h-full flex-1 mt-2 overflow-hidden">
+						<iframe id="ytplayer" src="http://www.youtube.com/embed/K-r9ZWRRVW4" allowFullScreen={true} />
+					</div>
+
+					<Stack
+						stack={[
+							{ title: "React.js", svg: react },
+							{ title: "Node.js", svg: node },
+							{ title: "Mongo DB", svg: mongodb },
+						]}></Stack>
+				</div>
+			</div>
+		</div>
+	);
+}
