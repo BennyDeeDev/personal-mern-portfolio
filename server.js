@@ -21,6 +21,14 @@ app.use("/api/user/udemy", udemy);
 app.use("/api/user/codewars", codewars);
 app.use("/api/contact", contact);
 
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("client/build"));
+
+	app.get("*", (req, res) => {
+		res.sendFile("./client/build/index.html");
+	});
+}
+
 fetchData.start();
 
 connectDB();
