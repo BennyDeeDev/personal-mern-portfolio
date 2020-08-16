@@ -6,15 +6,6 @@ const axios = require("axios");
 
 const { CodeWars } = require("../models/codewars.model");
 
-const CodeWarsClient = axios.create({
-	baseURL: "https://www.codewars.com/api/v1",
-	timeout: 1000,
-	headers: {
-		Accept: "application/json",
-		Authorization: codewars_api_key,
-	},
-});
-
 router.get("/", async (req, res) => {
 	try {
 		const challenges = await CodeWars.find();
