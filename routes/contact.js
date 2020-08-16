@@ -4,7 +4,15 @@ const nodemailer = require("nodemailer");
 
 const { gmail_email, gmail_password } = require("../config/config");
 
-router.post("/", (req, res) => {
+const rateLimit = require("express-rate-limit");
+
+const contactLimiter = rateLimit({
+	windowMs: 15 * 60 * 1000,
+	max: 3,
+	message: "Too many emails created from this IP, please try again after an hour",
+});
+
+router.post("/", contactLimiter, (req, res) => {
 	const smtpTrans = nodemailer.createTransport({
 		host: "smtp.gmail.com",
 		port: 465,

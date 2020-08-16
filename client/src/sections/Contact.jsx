@@ -7,8 +7,10 @@ import { useForm } from "react-hook-form";
 export default function Contact() {
 	const { register, errors, setError, handleSubmit } = useForm();
 	const [success, setSuccess] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
 
 	const onSubmit = (data) => {
+		setIsLoading(true);
 		BackendService.postContact(data)
 			.then(({ data }) => setSuccess("Email ist abgeschickt"))
 			.catch(() =>
@@ -16,7 +18,8 @@ export default function Contact() {
 					type: "manual",
 					message: "Es ist was schiefgelaufen, bitte versuchen Sie es später noch einmal",
 				})
-			);
+			)
+			.finally(() => setIsLoading(false));
 	};
 
 	return (
@@ -78,7 +81,13 @@ export default function Contact() {
 						{errors.message && "Bitte geben Sie eine Nachricht an"}
 					</div>
 					<button className="w-full rounded-lg bg-minimalist-gray mt-6 p-2 text-white opacity-75 hover:opacity-100">
-						Senden
+						{isLoading ? (
+							<div className="flex items-center  justify-center">
+								<div class="loader" />
+							</div>
+						) : (
+							<p>Senden</p>
+						)}
 					</button>
 					{success ? (
 						<div className=" bg-green-500 rounded-sm border border-green-600 mt-1 px-1 text-white">
@@ -89,7 +98,7 @@ export default function Contact() {
 						className={`bg-red-500 rounded-sm border border-red-600 mt-1 px-1 text-white ${
 							!errors.formError ? "hidden" : ""
 						}`}>
-						{errors.formError && "Bitte geben Sie eine Email an"}
+						{errors.formError && "Es ist ein Fehler aufgetreten, bitte versuchen Sie es später noch einmal"}
 					</div>
 				</form>
 			</div>
