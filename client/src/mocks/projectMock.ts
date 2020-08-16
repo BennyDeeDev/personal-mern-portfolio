@@ -9,7 +9,7 @@ export default [
 		source: "https://github.com/Relentl3zz/personal-mern-portfolio",
 		text:
 			"Dieses Portfolio kann sehr viel mehr als man auf den ersten Blick vermuten mag, z.B wurden große Teile dynamisch generiert und ich kann in meinem kommenden selbstgebauten Page-Builder ganz einfach Projekte nachreichen.",
-		video: "http://www.youtube.com/embed/K-r9ZWRRVW4",
+		video: "https://www.youtube.com/embed/K-r9ZWRRVW4",
 		stack: [
 			{ title: "React.js", svg: react },
 			{ title: "Node.js", svg: node },
