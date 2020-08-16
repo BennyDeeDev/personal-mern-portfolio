@@ -55,6 +55,6 @@ Dieses Projekt ist mein Portfolio welches mit dem folgenden Stack aufgebaut word
 </ul>
 
 Deployed und gehostet wird mit heroku aus dem Master-branch:
-https://benjaminderksen.heroku.com/ </br>
+https://benjaminderksen.herokuapp.com/ </br>
 
 Die Datenbank ist in MongoDB Atlas gespeichert
