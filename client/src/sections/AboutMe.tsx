@@ -38,7 +38,7 @@ export default function AboutMe() {
 						<div className="flex flex-col p-6  justify-between bg-white rounded-lg border border-minimalist-teal ">
 							<div className="flex flex-col-reverse md:flex-row">
 								<img
-									className="object-cover h-full rounded-lg border-2 border-minimalist-gray my-2 md:my-0 md:mr-4 w-48 p-1 "
+									className="object-cover rounded-lg border-2 border-minimalist-gray my-2 md:my-0 md:mr-4 w-48 p-1 "
 									src={profilepicture}
 									alt=""
 								/>
