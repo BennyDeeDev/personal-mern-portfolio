@@ -58,7 +58,7 @@ module.exports = async function fetchCodeWars() {
 	}
 
 	try {
-		challenges.save();
+		return await challenges.save();
 	} catch (error) {
 		throw new Error(error);
 	}

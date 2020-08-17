@@ -11,8 +11,6 @@ const codewars = require("./routes/codewars");
 
 const contact = require("./routes/contact");
 
-const fetchData = require("./jobs/fetchJob");
-
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -28,8 +26,6 @@ if (process.env.NODE_ENV === "production") {
 		res.sendFile("./client/build/index.html");
 	});
 }
-
-fetchData.start();
 
 connectDB();
 app.listen(port, () => console.log(`REST API on http://localhost:${port}/api`));

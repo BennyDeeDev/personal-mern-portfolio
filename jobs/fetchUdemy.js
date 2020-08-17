@@ -53,7 +53,7 @@ module.exports = async function () {
 	}
 
 	try {
-		courses.save();
+		return await courses.save();
 	} catch (error) {
 		throw new Error(error);
 	}
