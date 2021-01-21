@@ -15,9 +15,10 @@ export default {
 	frontend: [
 		{ id: 1, svg: html5, text: "HTML", progress: "90%" },
 		{ id: 2, svg: css3, text: "CSS", progress: "80%" },
-		{ id: 3, svg: javascript, text: "JavaScript", progress: "85%" },
-		{ id: 4, svg: react, text: "React", progress: "80%" },
-		{ id: 5, svg: vue, text: "Vue", progress: "90%" },
+		{ id: 3, svg: javascript, text: "JavaScript", progress: "90%" },
+		{ id: 4, svg: typescript, text: "TypeScript", progress: "80%" },
+		{ id: 5, svg: react, text: "React", progress: "90%" },
+		{ id: 6, svg: vue, text: "Vue", progress: "80%" },
 	],
 	backend: [
 		{ id: 1, svg: linux, text: "Linux", progress: "60%" },

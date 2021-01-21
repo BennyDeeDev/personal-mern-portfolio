@@ -64,12 +64,6 @@ export default function LandingPage() {
 					</div>
 				</div>
 
-				<div className="bg-gray-100">
-					<div className="container centered-container">
-						<Projects />
-					</div>
-				</div>
-
 				<div className="bg-white">
 					<div className="container centered-container">
 						<Cv />

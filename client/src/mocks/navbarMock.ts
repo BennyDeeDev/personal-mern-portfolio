@@ -4,7 +4,6 @@ export default [
 	{ title: "Fähigkeiten", id: "skills" },
 	{ title: "Udemy Kurse", id: "udemy" },
 	{ title: "Coding Challenges", id: "coding-challenges" },
-	{ title: "Projekte", id: "projects" },
 	{ title: "Lebenslauf", id: "cv" },
 	{ title: "Kontakt", id: "contact" },
 ];
